@@ -1,16 +1,15 @@
 # create a feature vector using gensim
-#from gensim.models import Word2Vec, Doc2Vec
+from gensim.models import Word2Vec, Doc2Vec # requires bleedy edge gensim
 import sys
 sys.path.append("../utils")
 
-from onlinew2v import Word2Vec as w2v # http://rutumulkar.com/blog/2015/word2vec
 # can update
 import numpy as np
 
 sentences = [[u'with', u'all', u'this', u'stuff', u'going', u'down', u'at', u'the', u'moment', u'with', u'mj', u'i', u've', u'started', u'listening', u'to', u'his', u'music', u'watching', u'the', u'odd', u'documentary', u'here', u'and', u'there', u'watched', u'the', u'wiz', u'and', u'watched', u'moonwalker', u'again'],
              [u'maybe', u'i', u'just', u'want', u'to', u'get', u'a', u'certain', u'insight', u'into', u'this', u'guy', u'who', u'i', u'thought', u'was', u'really', u'cool', u'in', u'the', u'eighties', u'just', u'to', u'maybe', u'make', u'up', u'my', u'mind', u'whether', u'he', u'is', u'guilty', u'or', u'innocent']]
 sentences2 = [['first', 'sentence'], ['second', 'sentence']]
-model = w2v(min_count=1)
+model = Word2Vec(min_count=1)
 model.build_vocab(sentences)
 model.train(sentences)
 
