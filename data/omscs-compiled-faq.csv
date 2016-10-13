@@ -1,0 +1,962 @@
+Question,Answer,Source
+How difficult is course X? How many hours should I expect to put in?,"There is a fantastic unofficial course review resource used exclusively for the online courses in the OMSCS program found here:
+
+[Unofficial Course Reviews](https://omscentral.com/)",reddit
+What should I take as a first course? What should I know for these courses?,"There are a lot of good threads on this. In addition to the course reviews, take a look at these threads. Remember that students who have not completed their foundational requirements may only take foundational courses.
+
+[Good First Classes to Take For First Semester](https://www.reddit.com/r/OMSCS/comments/4olui2/good_first_classes_to_take_for_first_semester/)
+
+[Classes Not to Take Together and That Are Tough To Get Into](https://www.reddit.com/r/OMSCS/comments/3qyup9/classes_not_to_take_together_and_classes_that_are/)
+
+[Course Pre-Req Advice](https://www.reddit.com/r/OMSCS/comments/3rghng/preparing_for_spring_2016/cwo0wqu)",reddit
+Foundational courses? What are those? Is course X a foundational course?,"Take a look at the course list on the OMSCS website. Courses with an asterisk are considered ""foundational"".
+
+[Current Courses](http://www.omscs.gatech.edu/current-courses)",reddit
+"What is this ""foundational course requirement""?","All new students must pass TWO foundational courses (see #4) with a B grade or better in the first year of the program. Additionally, you can only take foundational courses until this requirement is met. This means one Fall, one Spring, and one Summer session. Example: Starting in Spring 2017 would mean you have Spring 2017, Summer 2017, and Fall 2017 to complete this requirement.
+",reddit
+I have my course plan all figured out! I have a big spreadsheet ready to go!,"Good job preparing! However, not all courses are offered every summer, and sometimes registration can be sketchy. Make sure you're flexible in when you take certain courses.",reddit
+How many courses may I take?,"You may only take 2 courses/semester until you meet your foundational requirement. Then, you can take up to 3 courses/semester. The summer session only allows for one course. Any exception to these must be approved, and doing so is not a trivial process.",reddit
+Not all are offered in the summer? Which ones are offered? Can I take course X in the summer?,"There's no guarantee about a summer schedule before it comes out, but the courses listed in the summer session on the [Current Courses](http://www.omscs.gatech.edu/current-courses) page is usually pretty accurate.",reddit
+Where can I see the syllabus/reading/pre-reqs for Course X before I sign up?,"
+There are a couple places for this.
+
+First, check the course's specific page on the [Current Courses](http://www.omscs.gatech.edu/current-courses) section of the website. Many list syllabi, pre-reqs, etc.
+
+Second, go to [Udacity](https://www.udacity.com/courses/georgia-tech-masters-in-cs) and see if the course is offered for free there. If so, you can register using a Google or Facebook account to view a lot of the lecture material for free before the course begins to see if it is for you or even to get a slight jump.
+
+Third, here's a fantastic [Pre-Req Spreadsheet](https://docs.google.com/spreadsheets/d/1JUbZK1xEyvSQEhDEi3vqGDgnVQCi0nR9nOIzDGxJO2I/edit#gid=0) linked to on the Google Plus community.
+
+Finally, there are some unofficial wikis for several courses on Udacity. Here are the links for them:
+
+[6210 - Advanced OS](https://www.udacity.com/wiki/aos)
+
+[6220 - High Performance Computing](https://www.udacity.com/wiki/ud281)
+
+[6250 - Computer Networks](https://www.udacity.com/wiki/cn)
+
+[6290 - High Performance Computer Architecture](https://www.udacity.com/wiki/hpca)
+
+[6300 - Software Development Process](https://www.udacity.com/wiki/sdp)
+
+[6310 - Software Architecture and Design](https://www.udacity.com/wiki/saad)
+
+[6440 - Intro to Health Informatics](https://www.udacity.com/wiki/ud514)
+
+[6505 - Computability, Complexity, and Algorithms](https://www.udacity.com/wiki/cca)
+
+[7367 - Knowledge Based AI](https://www.udacity.com/wiki/ud037)
+
+[7641 - Machine Learning](https://www.udacity.com/wiki/ml/GT)
+
+[8803 - Intro to OS](https://www.udacity.com/wiki/ud923)
+
+[8803 - Robotics](https://www.udacity.com/wiki/cs373/gt)",reddit
+When are courses offered? How long are they?,"Courses are offered in the Fall, Spring, and Summer terms. In the Fall and Spring, the term lasts 15 weeks. In the Summer, they can be anywhere from 10-13 weeks.",reddit
+How many courses are required to graduate?,"30 hours must be completed to graduate. 15-18 hours will come from your specialization field, and the rest should be filled in using elective courses (anything offered by the program).",reddit
+Can I select multiple specializations?,"In a sense, no. You can only have one specialization for graduation purposes. However, you're more than welcome to take all the courses and ""complete"" another specialization. It just won't count as a second specialization. In the end, no specializations are listed on your diploma.",reddit
+Help! Machine Learning doesn't have enough electives for the specialization!,"There are lots of courses being added over time that will likely go into that category. It has been confirmed that CSE-8803 Big Data for Health Informatics and CS-8803-O03 Special Topics: Reinforcement Learning will be added to the list as possibilities. If you're still nervous, check with the advisors to see if there are any others that will substitute for the third elective course.",reddit
+"My specialization courses don't add up to 30 hours, but isn't that the program requirement?","Yes, it is. The Interactive Intelligence, Robotics, and Machine Learning specializations all require 15 hours, and Computing Systems requires 18. The remaining hours to meet the 30 hours requirement can be from any other courses in the program. Remember, 6 hours must foundational, whether in the specialization or not.",reddit
+Can you tell me what courses are in specialization X?,"You can view all four specializations and their requirements on the OMSCS website below.
+
+[Specialization Areas](http://www.omscs.gatech.edu/program-info/specializations)",reddit
+How does registration work for new students?,"You will be issued a time ticket usually about ten days before classes start that tells you when to log in and register. There will be an email usually a few days before time tickets are assigned that explains the process in excruciating detail. To see when time tickets will be issued, check out the [Academic Calendar](http://www.registrar.gatech.edu/calendar/).",reddit
+Will I be able to get into Course X?,"The default answer is maybe. Most of the popular courses will have a long waitlist by the time new students are able to register. Have a few backups (2-4) ready just in case the course(s) you want have huge waitlists. You can add yourself to the waitlist for a course if you're determined to take it, however.",reddit
+"I'm on a waitlist, but I'm number ### on it! I'm not going to get into any courses!","First, relax. You will get into at least one course, so don't worry about that. Second, the waitlists are used to gauge how many TAs are necessary for a particular section before they allocate the seats. So, if all 200-300 seats in a popular course are taken, do not worry about being on the waitlist. Many times, they will open up a lot more seats for the most popular courses to clear out a bunch of the waitlist. This may not happen until the first week of classes, but many professors take things slow the first week in anticipation of their course rosters fluctuating.
+
+Also, your waitlist position will likely go down (closer to 1) as time goes by. Many students register for courses and then change their mind after the first couple days, or they simply overloaded on courses (chose more than the allowed number) and will drop some as the first day of classes approaches.",reddit
+Will I get admitted?,"We certainly can give you some feedback on this topic. However, we are not the admissions committee. We do not know exactly how decisions are made, so no one is liable here for your admissions status in the end.",reddit
+Why was I rejected?,"We can not answer that for you here. We can, however, give you advice for the future.",reddit
+When are admissions decisions made?,This can vary based on a lot of factors. Some people get approved or rejected in a couple weeks. Others don't find out for a couple months.,reddit
+"When applying, do my transcripts have to be official?","No, they can be unofficial. However, if you are admitted, you will be required to send an official transcript.",reddit
+Can someone read my Personal Statement/Resume/Etc.?,"Sure, just remember that no one here has the magic answer to getting admitted. We can do our best to give some feedback, though.",reddit
+Can I delay my admission to the following term if I've already been accepted?,"Unfortunately, no. You will have to reapply again for the new term.",reddit
+Can I repeat a course? Will it still count?,"You can repeat a course as many times as you would like. However, all attempts will count towards your GPA and only the last attempt will count towards the degree.",reddit
+What if I want to take a semester off for some reason?,"You simply don't register for any courses in that semester. However, any TWO consecutive semesters without courses will remove you from the program. Example: You took a course in the Fall and want a break in the Spring. If you don't sign up for a course in the Summer, you will be dropped.",reddit
+"CS 6505: Computability, Complexity, and Algorithms",[Advanced Algorithms and Complexity - Coursera (UCSD)](https://www.coursera.org/learn/advanced-algorithms-and-complexity) - a similar course to CCA with helpful videos on similar topics,reddit
+"I just received my acceptance decision. When will I receive the letter
+from the Institute?"," Once you have confirmed your decision, you will receive the letter from
+GATech in the next couple of days.
+
+## ",google+
+When do I register for classes?," Time Tickets available on August 12, 2016 @ 4pm ET. Phase II Registration
+for Fall 2016 program begins August 13 through August 26, 2016. See the
+[Academic Calendar](https://www.google.com/url?q=http://www.registrar.gatech.e
+du/calendar/&sa=D&ust=1473318513013000&usg=AFQjCNFmm1aEJJzG-gnmwX_UeFPvv-Q4fQ)
+for other terms.
+
+## ",google+
+Can I create a script to register for me?," Don't do it, too many refreshes and your account will be banned and locked.
+This has happened to one student so far.  
+
+## ",google+
+My GATech email id is not activated yet. When will it be activated?," Sometime before your registration.
+
+## ",google+
+Am I eligible for a GATech student ID card?," You are eligible, but to obtain the card you must request it in person at
+the Georgia Tech bookstore. However, if you would like to obtain an
+educational discount (e.g. on software or technology purchases) a letter of
+Enrollment Verification may be sufficient.  You can request one on e ->
+Registration - Oscar -> Student Services & Financial Aid -> Student Records ->
+Verification Requests -> Enrollment Verification Request. (thanks, Vinod
+Dinakaran!)
+
+## ",google+
+"What are the foundational courses I should take up for the first
+semester?"," [http://www.omscs.gatech.edu/courses/](https://www.google.com/url?q=http://
+www.omscs.gatech.edu/courses/&sa=D&ust=1473318513021000&usg=AFQjCNFgkamjdKAy5w
+U9xims5JuVZdgsMw) indicates all the foundational courses available with an
+(*), at least 2 of which you will need to get a B on to be fully admitted into
+the program. You have a year to complete 2 foundational courses so you do not
+have to take two of them your very first term. It may good to note too that
+starting Fall 2016, you will not be able to register for non-foundational
+courses until you complete the foundational course requirement.
+
+## ",google+
+Are the courses offered each semester? Do we only get 4 in the Spring?," The courses listed under ""OMSCS CS COURSES"" on the bottom of [http://www.om
+scs.gatech.edu/courses/](https://www.google.com/url?q=http://www.omscs.gatech.
+edu/courses/&sa=D&ust=1473318513024000&usg=AFQjCNHhDB7CUiVa-qD1UpLivamRyP0zQg)
+should all be offered each semester, with the exception of the summer
+semester. The courses listed under ""FUTURE COURSES""
+([http://www.omscs.gatech.edu/future-
+courses](https://www.google.com/url?q=http://www.omscs.gatech.edu/future-
+courses&sa=D&ust=1473318513025000&usg=AFQjCNHQazXJ9bkmuQ8PapudOb_xMnGJAQ))
+will be added for the semester indicated in addition to the already available
+courses. Summer semester will offer a smaller selection, as some courses are
+deemed too intense for the shorter semester.
+
+## ",google+
+Any indication on the amount of work hours or difficulty of the courses?," Students from the earlier cohort have crowdsourced an[https://docs.google.c
+om/spreadsheets/d/1zJp3Bu2Rb4DRpHLYL2r4nZ210Y2u8eFY7xgQxO4mq7o/edit?pli=1#gid=
+0](https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1zJp3Bu
+2Rb4DRpHLYL2r4nZ210Y2u8eFY7xgQxO4mq7o/edit?pli%3D1%23gid%3D0&sa=D&ust=14733185
+13028000&usg=AFQjCNHGAyZiRh_apaWdmUIHq2xivx-DTg)d (obsolete) built a
+spreadsheet of course https://www.reddit.com/r/OMSCSdifficulty. It can be
+accessed [here](https://www.google.com/url?q=https://docs.google.com/spreadshe
+ets/d/1zJp3Bu2Rb4DRpHLYL2r4nZ210Y2u8eFY7xgQxO4mq7o/edit?pli%3D1%23gid%3D0&sa=D
+&ust=1473318513029000&usg=AFQjCNHici5BoiVB1lUPLGhBOLgVK1UjKQ)[. ](https://www.
+google.com/url?q=https://docs.google.com/spreadsheets/d/1zJp3Bu2Rb4DRpHLYL2r4n
+Z210Y2u8eFY7xgQxO4mq7o/edit?pli%3D1%23gid%3D0&sa=D&ust=1473318513030000&usg
+=AFQjCNH4pFJiDtDwtsh490R64tyl_-zdOg)You can also review the website [Course Cr
+itique](https://www.google.com/url?q=https://critique.gatech.edu/&sa=D&ust=147
+3318513030000&usg=AFQjCNGEgG9pQjXCLNxGXGpdq2f45glLtQ) which contains average
+grades for classes and professors.
+
+There is a new [web application](https://www.google.com/url?q=https://gt-
+course-surveys.herokuapp.com/&sa=D&ust=1473318513032000&usg=AFQjCNED99AsGPmmg-
+AYSZR8rf5hBf2jng) being built and maintained which contains all the data from
+the spreadsheet, any newer reviews and also the data from [IRP](https://www.go
+ogle.com/url?q=http://www.irp.gatech.edu/&sa=D&ust=1473318513032000&usg=AFQjCN
+GAYEEjQTFZvEd6hGCjta6vHZ7NkA).
+
+## ",google+
+How can I start preparing for the courses?," [Udacity](https://www.google.com/url?q=http://www.udacity.com&sa=D&ust=1473
+318513035000&usg=AFQjCNHVGcxs6e6PVEg8RONv62tHbQwEXA) has some of the courses
+for free right now. You could attempt them to acclimatize yourself. Some of
+the classes are available here: [https://www.udacity.com/courses#!/georgia-
+tech-masters-in-
+cs](https://www.google.com/url?q=https://www.udacity.com/courses%23!/georgia-
+tech-masters-in-cs&sa=D&ust=1473318513035000&usg=AFQjCNGXQ-
+gv8cGKF2usYSPyT6sbOjuBPg)
+
+You can also search for pages for on-campus versions of the same class from
+previous years. These will often let you see a syllabus as well as other
+information about the course, such as programming languages used, books
+required, etc.
+
+B: Look at the [Prereq document](https://www.google.com/url?q=https://docs.goo
+gle.com/spreadsheets/d/1JUbZK1xEyvSQEhDEi3vqGDgnVQCi0nR9nOIzDGxJO2I/edit?usp%3
+Dsharing&sa=D&ust=1473318513038000&usg=AFQjCNEYx75FKUXP2sfwOpvtdfaRwSHhzA) for
+what you might need for a particular class.
+
+## ",google+
+How will the course be scheduled through the year?," A full calendar year has 3 semester terms. Fall and Spring semesters are 15
+weeks while Summer is 10-13 weeks of class. Each lecture class is equal to 50
+minutes per day.
+
+## ",google+
+Can I repeat a course in order to improve my grade?," Yes, you can retake a class as many time as you like but your previous
+attempts will still affect your GPA. And only your last attempt counts towards
+the requirements. Reference discussion: [https://plus.google.com/u/0/+FelixMue
+ller/posts/fe41gbDs7W7?cfem=1](https://www.google.com/url?q=https://plus.googl
+e.com/u/0/%2BFelixMueller/posts/fe41gbDs7W7?cfem%3D1&sa=D&ust=1473318513043000
+&usg=AFQjCNEtpeh8u0SgQJmnstgZ_ou2cHYdww)
+
+## ",google+
+When should you declare your specialization?," As of September the official word is as follows: ""We will give you
+information about declaring your area of specialization at a later date. It is
+not necessary for you to declare at this time.""
+
+**Sometimes students are asked to tell their intended specializations just for planning of future offerings, but You don't ""have to"" declare until you petition to graduate. Before then, you can change your mind as many times as you like because more than half of your courses will be only counted as elective anyways (need 30 course hours but only 15-18 hours count toward your specialization).
+
+## ",google+
+I don't see all of the courses required for my specialization!," As this program is new, courses are being added in each semester. Not all
+specializations can be completed in of Fall 2015. But with the inclusion of
+Big Data for Health and Reinforcement Learning for the Machine Learning
+specialization, all specializations can now be completed. Since the courses
+required to fulfill a specialization are only a portion of the required number
+of courses, take whatever courses look interesting until additional
+specialization courses become available.
+
+## ",google+
+What courses are required in order to complete a specialization?," A course specialization matrix has been prepared to answer this very
+question. You can find the [course specialization matrix here](https://www.goo
+gle.com/url?q=https://docs.google.com/spreadsheets/d/1CkfZ0p5aFOX67RKALH_bwQ8H
+pp6nJhcvKEjEp_cxLnk/edit?usp%3Dsharing&sa=D&ust=1473318513049000&usg
+=AFQjCNFwS-xv16E1S_Mtzlc1qe_mhUEFVw). See also [Visualizing Specializations](h
+ttps://www.google.com/url?q=https://docs.google.com/spreadsheets/d
+/1B8C_ZFXqzrQCCMfErHcrsL30z1wzAkSqPqj-
+GIxZcJE/edit?usp%3Dsharing&sa=D&ust=1473318513050000&usg=AFQjCNEvExdyJN5ZZ6l-
+6r9Qbn7MVz5iOg). This information matches the information on the main GT OMSCS
+website but consolidates it nicely! (Note: The CoC was in the process of
+change the degree from 36 to 30 credits, and merging several specializations
+into a single Computing Systems specialization.)
+
+## ",google+
+"If you pass more than the required core courses of a specialization, do
+they count as ""electives"" or are they just ""normal"" points that count towards
+your degree?"," They are just ""normal"" points that count towards your degree. . So if it
+says ""select 2 from this list"" you have to do that. However, for any
+additional ""free electives"", you can take any course you want, including more
+from the specialization.
+
+In other words, once you take the minimum courses you must take the required
+minimum course  count as described in the specialization, then you can take
+any other course to fill up the remaining 30 hours, whether they're core,
+specialization-related electives, or from another specialization entirely.
+
+Let's take Computing Systems as an example:
+
+  * To complete it (30 pts), you would need:
+  * the CCA class is required in all cases (3 pts)
+  * two courses from the ""Core Courses"" list (6 pts)
+  * three courses from the ""Electives"" list (9 pts)
+  * four courses from the full OMSCS offering, including the core and elective list of the Computing System specialization (12 pts)
+  * ""Core Courses"" do not count as ""Electives"" and vice versa.
+
+## ",google+
+Can I declare multiple specializations?," According to previous posts on the Google+ group, you must choose one and
+only one specialization to be reflected on your transcript, though you could
+mention other specializations whose requirements you've fulfilled on your
+resume and other documents.  See Charles Isbell's comment [here](https://www.g
+oogle.com/url?q=https://plus.google.com/111000623426046984104/posts/AiDHR76ZMA
+3&sa=D&ust=1473318513057000&usg=AFQjCNH2y2BtERGRjizddtQA2ppPbt8Tbw). (But
+again doubling-specializing isn't a thing that is recognized officially; feel
+free to do it and even call it out on your resume, but you will just ""declare""
+one of them.)
+
+## ",google+
+Where can I see the courses required for each specialization?," You can find the list of specializations at the [official omscs
+specializations page](https://www.google.com/url?q=http://www.omscs.gatech.edu
+/program-info/specializations&sa=D&ust=1473318513058000&usg=AFQjCNFKZz7C-n-CMv
+ijso1qQ03I9YVZDw) or at [Visualizing Specializations](https://www.google.com/u
+rl?q=https://docs.google.com/spreadsheets/d
+/1B8C_ZFXqzrQCCMfErHcrsL30z1wzAkSqPqj-
+GIxZcJE/edit?usp%3Dsharing&sa=D&ust=1473318513059000&usg
+=AFQjCNGxNuID5pRFiO1CpT4N-oE_xVdPww), which lists all the
+courses/specializations together. Be aware that the document is not official,
+and may contain errors. Confirm with the official site before making any
+concrete plans. --Alyssa H.
+
+## ",google+
+Where should I send my official transcripts once I have been admitted?," Graduate Studies
+
+Georgia Institute of Technology
+
+631 Cherry Street, Room 318
+
+Atlanta, GA 30332-0321
+
+## ",google+
+"I am new to the program and want to start using Lynda.com to prepare. I
+understand that Georgia Tech students get free access to Lynda.com through [ht
+tp://lynda.gatech.edu/](https://www.google.com/url?q=http://lynda.gatech.edu/&
+sa=D&ust=1473318513061000&usg=AFQjCNHKo4r-woy3bFS2FDnYnKMX9-QAWQ). That said,
+when I go there I cannot get through! Help!"," As a newly admitted student, when you went to the lynda.gatech.edu link,
+you likely received the response: ""Your account is not allowed to access
+Lynda.com. Lynda.com privileges are extended to degree pursuing undergraduate
+and graduate students as well as regular full time faculty and staff. Language
+Institute (LI) students, Affiliate employees, applicants, and guests are not
+eligible."" This is correct. As confirmed by GT student services, you will be
+able to use Lynda AFTER you are registered for courses.
+
+## ",google+
+What is the process for transferring credit from another institution?," Email [oms-advising@cc.gatech.edu](mailto:oms-advising@cc.gatech.edu) after
+the first week of classes ends to inquire about the procedure.  Please note
+that transfer credit is NOT reviewed until AFTER you are enrolled in courses.
+Also important, note that transfer credit cannot apply to two different
+degrees; that is, say if you completed or are studying towards another
+graduate degree, none of the credits towards that degree can be transferred to
+your OMSCS degree. Finally, transfer credit will probably be hard to get, as
+two graduate-level courses from different A/N\programs rarely have directly
+transferrable curriculum.
+
+## ",google+
+"I have received the Institute decision letter confirming my acceptance.
+What are my next steps?"," Check out [http://www.cc.gatech.edu/current/masters/omscsportal](https://ww
+w.google.com/url?q=http://www.cc.gatech.edu/current/masters/omscsportal&sa=D&u
+st=1473318513065000&usg=AFQjCNEqZjjx7w83c5F98sd9euuFhVy1RQ), which contains a
+onboarding page and links to several different starting points. There's also
+an orientation on Udacity. You can access it here:
+[https://www.udacity.com/course/omscs-student-orientation--
+gt101](https://www.google.com/url?q=https://www.udacity.com/course/omscs-
+student-orientation--
+gt101&sa=D&ust=1473318513066000&usg=AFQjCNHDb7UmcvCe4-cwp0pLchyZjsNArw)
+
+## ",google+
+"What is the institution and department code for sending the TOEFL score
+from ETS?"," Select Institution Code: 5248 Department Code: 78 (Physical
+Science--->Computer Science) and the scores will be reported.
+
+## ",google+
+I live in <insert metro area here>. How do I find other members?," There is a special Google Doc set up that lists the many different
+communities within our incredible OMSCS program. You can find that document [h
+ere](https://www.google.com/url?q=https://docs.google.com/document/d/1RIAHLEmr
+8Ic5HXq7ncYXdr8C0VwrUeULemO64iulL9A/edit?usp%3Dsharing&sa=D&ust=14733185130680
+00&usg=AFQjCNGF2e-x614Ai_15mBcbLGN4ljL2ew)!
+
+## Q. What are the new courses going to be like?
+
+",google+
+"Where can I find ""unofficial"" course wiki's for the current Georgia Tech
+courses?","The course names are listed on the [OMSCS Course page](https://www.google.c
+om/url?q=http://www.omscs.gatech.edu/courses/&sa=D&ust=1473318513070000&usg=AF
+QjCNFJ0upJZo90cmaW7mZ8-hhgBjLJkA), but you can find out about what they might
+consist of with a google search.
+
+6210 - Advanced Operating Systems - [https://www.udacity.com/wiki/aos](https:/
+/www.google.com/url?q=https://www.udacity.com/wiki/aos&sa=D&ust=14733185130720
+00&usg=AFQjCNH5VpcAVx_a54hYYl0UgJ8b_jXljA)
+
+6220 - High performance Computing - [https://www.udacity.com/wiki/ud281](https
+://www.google.com/url?q=https://www.udacity.com/wiki/ud281&sa=D&ust=1473318513
+073000&usg=AFQjCNFGZY97Ra4LAvDIQllP3BXTJDYQ6Q)
+
+6250 - Computer Networking - [https://www.udacity.com/wiki/cn](https://www.goo
+gle.com/url?q=https://www.udacity.com/wiki/cn&sa=D&ust=1473318513073000&usg
+=AFQjCNEVnCd3rjmge60Z-eHFI-xnJMOFzg)
+
+6290 - High Performance Computer Architecture - [https://www.udacity.com/wiki/
+hpca](https://www.google.com/url?q=https://www.udacity.com/wiki/hpca&sa=D&ust=
+1473318513074000&usg=AFQjCNEBeWEiiXjC-XwI4H4iyZv1d0CjBA)
+
+6300 - Software Development Processes - [https://www.udacity.com/wiki/sdp](htt
+ps://www.google.com/url?q=https://www.udacity.com/wiki/sdp&sa=D&ust=1473318513
+074000&usg=AFQjCNHgyeHxIAUFysIHssXR5Enxn-HrGg)
+
+6310 - Software Architecture & Design - [https://www.udacity.com/wiki/saad](ht
+tps://www.google.com/url?q=https://www.udacity.com/wiki/saad&sa=D&ust=14733185
+13075000&usg=AFQjCNH7IR32ur6HZ8FwvcxuiMiUnM5C2g)
+
+6440 - Introduction To Health Informatics - [https://www.udacity.com/wiki/ud51
+4](https://www.google.com/url?q=https://www.udacity.com/wiki/ud514&sa=D&ust=14
+73318513076000&usg=AFQjCNFfip5oHZzUuK8bCuz4CcTAY5xeFA)
+
+6505 - Computability, Complexity & Algorithms - [https://www.udacity.com/wiki/
+cca](https://www.google.com/url?q=https://www.udacity.com/wiki/cca&sa=D&ust=14
+73318513076000&usg=AFQjCNHxQyjGXqjjWO0imR8gkgAS_lh3jw)
+
+7367 - Knowledge Based AI - [https://www.udacity.com/wiki/ud037](https://www.g
+oogle.com/url?q=https://www.udacity.com/wiki/ud037&sa=D&ust=1473318513077000&u
+sg=AFQjCNHYhvLDbus2vRGpW7CQkXgh435d4w)
+
+7641 - Machine Learning - [https://www.udacity.com/wiki/ml/GT](https://www.goo
+gle.com/url?q=https://www.udacity.com/wiki/ml/GT&sa=D&ust=1473318513078000&usg
+=AFQjCNFJMG--Z9vYrWBDsJ_H-HLrsP6rsw)
+
+8803 - Introduction To Operating Systems - [https://www.udacity.com/wiki/ud923
+](https://www.google.com/url?q=https://www.udacity.com/wiki/ud923&sa=D&ust=147
+3318513079000&usg=AFQjCNEUyNy4DNtCGg2EcUm0eobynbAoGw)
+
+8803 - Robotics - [https://www.udacity.com/wiki/cs373/gt](https://www.google.c
+om/url?q=https://www.udacity.com/wiki/cs373/gt&sa=D&ust=1473318513080000&usg=A
+FQjCNGBn58pezW5l1LBk36WKzEEaavsFg)
+
+##",google+
+ What if I choose to sit out the spring term of the OMSCS program?,"Scenario 1:
+
+I took a course (or courses) in Fall 2014 and do not want to take a class in
+Spring 2015.  What do I do?
+
+Answer -- You don't need to do anything other than do not sign up for a
+course.  You must take a course in Summer 2015 to continue in the program.  If
+you sit out TWO consecutive terms (Spring and Summer), you will have to
+reapply for admission and there is no guarantee you will be readmitted.
+
+Scenario 2:
+
+I started taking a course (or courses) in Fall 2014 and I withdrew from
+school. I do not want to take a class in Spring 2015. What do I do? (this
+scenario applies if you totally withdrew from all courses)
+
+Answer -- same answer as Scenario 1.
+
+Scenario 3:
+
+This is my first term in the program, but I'd like to delay start until next
+term.
+
+Answer  -- You'll have to reapply for admission if you do not register for
+your first term.
+
+## ",google+
+"How do students traditionally do in these courses?","
+[http://critique.gatech.edu](https://www.google.com/url?q=http://critique.gate
+ch.edu&sa=D&ust=1473318513087000&usg=AFQjCNGX9lf4iE6hz7DxPxcCr3cKxiJypg)
+typically has this information. See also [GT Course
+Surveys](https://www.google.com/url?q=https://gt-course-surveys.herokuapp.com/
+%23/grades/all&sa=D&ust=1473318513088000&usg=AFQjCNH6oGufRHn5UfonFKi24l80Qv48K
+g). It's important to look at sections starting with O01 to see OMSCS-specific
+outcomes:
+
+CS 6210 - [http://critique.gatech.edu/prof.php?id=RAMACHANDRANUMAKISHORE#CS621
+0](https://www.google.com/url?q=http://critique.gatech.edu/prof.php?id%3DRAMAC
+HANDRANUMAKISHORE%23CS6210&sa=D&ust=1473318513090000&usg=AFQjCNGggp6vMI3WG5IfF
+_kSphjifGpOng)
+
+CS 6250 - [http://critique.gatech.edu/prof.php?id=FEAMSTERNICHOLASG#CS6250](ht
+tps://www.google.com/url?q=http://critique.gatech.edu/prof.php?id%3DFEAMSTERNI
+CHOLASG%23CS6250&sa=D&ust=1473318513091000&usg
+=AFQjCNGBwVkV4dWWccxuDCk2tk4MOey-QQ)
+
+CS 6300 - [http://critique.gatech.edu/prof.php?id=ORSOALESSANDRO#CS6300](https
+://www.google.com/url?q=http://critique.gatech.edu/prof.php?id%3DORSOALESSANDR
+O%23CS6300&sa=D&ust=1473318513092000&usg=AFQjCNF_vpKlhXkImg4u9Le-BZ6l9b7LoQ)
+
+CS 7641 - [http://critique.gatech.edu/prof.php?id=ISBELLJRCHARLESLEE#CS7641](h
+ttps://www.google.com/url?q=http://critique.gatech.edu/prof.php?id%3DISBELLJRC
+HARLESLEE%23CS7641&sa=D&ust=1473318513092000&usg=AFQjCNFeuXmK7mhv0sPT6BzvlU6W9
+7BcQA)
+
+CS 8803AIR - [http://critique.gatech.edu/prof.php?id=THRUNSEBASTIAN](https://w
+ww.google.com/url?q=http://critique.gatech.edu/prof.php?id%3DTHRUNSEBASTIAN&sa
+=D&ust=1473318513093000&usg=AFQjCNHMCxnhiZJEJd_yWqpL1prxS7O16g)
+
+For current students, [http://www.irp.gatech.edu/reports/](https://www.google.
+com/url?q=http://www.irp.gatech.edu/reports/&sa=D&ust=1473318513095000&usg=AFQ
+jCNFAhCwKdvb0uC62MEAg0iSrcTtD-g) has past grade information listed under
+Academics > Grade Distribution - Instructor Search.  I did need to sign in
+with my gatech id to view this.  I believe the O01 sections are the online
+ones.
+
+Note that the [GT Course Surveys](https://www.google.com/url?q=https://gt-
+course-surveys.herokuapp.com/%23/grades/all&sa=D&ust=1473318513096000&usg=AFQj
+CNGxe97_bAckvpCqApA8dVh6XibFEg) app aggregates just the O01 sections from
+irp.gatech.edu.
+
+##",google+
+" Help! I need some more information on time tickets & registration! When
+is my registration? How can I check the time I register?
+","
+Check your time ticket in OSCAR by following these directions:
+
+  * Go to [https://buzzport.gatech.edu/cp/home/displaylogin](https://www.google.com/url?q=https://buzzport.gatech.edu/cp/home/displaylogin&sa=D&ust=1473318513099000&usg=AFQjCNEQJ1TtXVjkoIyl4-xAYtM5aVOqCQ)
+  * Sign in using your GT credentials
+  * Click on the ""Home"" link on the top menu bar
+  * Click ""Registration-Oscar"" and that will take you to OSCAR
+  * On the OSCAR main menu, choose Student Services & Financial Aid
+  * Click Registration then Registration Status
+  * Select <current term> for Term and hit SUBMIT
+
+This page will display a time at which your Registration Time Ticket will
+begin. Also, if you have any holds or standing issues, they will appear here
+as well.
+
+
+
+Your time ticket will tell you when you are allowed to begin registering for
+classes. Once the registration cap is reached for a course, the course is
+full.  We may consider accepting overload requests, but WATCH your email for
+updates on that.  The courses that are available are from this list: [http://w
+ww.omscs.gatech.edu/courses/](https://www.google.com/url?q=http://www.omscs.ga
+tech.edu/courses/&sa=D&ust=1473318513102000&usg=AFQjCNHRitDVaKNMLwnomYwiuU8RFM
+WHBg)
+
+
+
+Any Online course will have a section of ""O"".  Registration is first come,
+first served, so you will want to register as soon as possible after your time
+ticket begins.
+
+
+
+For detailed registration information, please follow this link:
+
+[http://www.registrar.gatech.edu/registration/reginfo.php](https://www.google.
+com/url?q=http://www.registrar.gatech.edu/registration/reginfo.php&sa=D&ust=14
+73318513103000&usg=AFQjCNHtZEoiSXqd9AO3j68sT52ot-7hCg)",google+
+"Given that the projected course offerings aren't complete for any
+specialization through 2015, how will Dec 2015 graduation work?"," (Mimi) We won't keep you from graduating in a timely manner. We will work
+something out with the individual student!
+
+",google+
+"For fulfilling the first 2 foundational course requirements  \- What happens
+if you do not pass a foundational course with a B or better? Do you have to
+just retake another foundational course or are you not allowed to be fully
+admitted to the program?"," Within the first year you simply have to get two B's in foundational
+courses. If you get a C in your first semester, you can take it again in your
+second semester to try and get the B. You can also wait to take it in your
+third semester. Thus, you won't at all be removed from the program getting a C
+in your first semester if that is the foundational course you take. You have
+two more semesters to either improve that grade, or take an alternate course
+that is foundational and get a B (noting of course that if you don't re-take
+that course that is a C, you can't use it to fulfill one of your
+specialization. ([added as per Nate Payne's Response](https://www.google.com/u
+rl?q=https://plus.google.com/109249204227920896888/posts/ZQoHXTMUtj7&sa=D&ust=
+1473318513107000&usg=AFQjCNHnyGDPOtK7DSZCSN6R95MOtijxYw))
+
+",google+
+"If I took a foundational course last semester and earned a C,  and I retake
+it next semester and earn a B, is the original C grade replaced by the B or
+will both count in my GPA/CPA? What will show on my transcript?"," Both count.
+
+## ",google+
+How many students are enrolled in the OMSCS program?," There are 2306 students enrolled in the OMSCS program as of the Spring 2015
+semester.
+
+## ",google+
+"What's the fastest a full-time student could hope to complete the
+program?
+","
+Assume you were accepted in the Fall of a given year. First, you can register
+for at most two  courses. Once you finish your foundational courses (with a B
+or higher), then you can register for at most three courses a semester.
+Note,that you can only take one course during the summers. Thus, the fastest
+anyone can finish the masters would be like so:
+
+Fall 201X
+
+Spring 201(X+1)
+
+Summer 201(X+1)
+
+Fall 201(X+1)
+
+Spring 201(X+2)
+
+2 courses
+
+3
+
+1
+
+3
+
+1",google+
+" I received a suspicious email on my gatech account. What should I do?
+
+","Follow the instructions here: [https://security.gatech.edu/](https://www.go
+ogle.com/url?q=https://security.gatech.edu/&sa=D&ust=1473318513122000&usg=AFQj
+CNELTJk6SnKFmM3YvdEdIAe4O24xfQ)
+
+##",google+
+" Is it possible for me to transfer to the on-campus program?
+
+","There are some discussions here: [https://plus.google.com/10403397121044853
+0860/posts/KzDHSZHZJsD](https://www.google.com/url?q=https://plus.google.com/1
+04033971210448530860/posts/KzDHSZHZJsD&sa=D&ust=1473318513123000&usg
+=AFQjCNEeF1kvbO849Fl8W-iqwwboBuOMaw)
+
+The best thing to do would be to contact the advisers for more details.
+
+##",google+
+" What should I do if I intend to pursue a PhD?
+
+","There is quite some discussion here: [https://plus.google.com/1166432898217
+42281566/posts/FK8rW45gYhi](https://www.google.com/url?q=https://plus.google.c
+om/116643289821742281566/posts/FK8rW45gYhi&sa=D&ust=1473318513125000&usg
+=AFQjCNH2cFaHrdN-1APIdfgk7szuHOrOcQ)
+
+If you are particularly interested in having a PhD in CS at Georgia Tech, you
+might want to take a look at this:
+
+[http://www.cc.gatech.edu/academics/degree-programs/phd/computer-science/curre
+ntstudents](https://www.google.com/url?q=http://www.cc.gatech.edu/academics
+/degree-programs/phd/computer-science/currentstudents&sa=D&ust=147331851312600
+0&usg=AFQjCNGUQKdPH4ZeYMRtqcrro2jF_NcMXg)
+
+##",google+
+" There seems to be not enough courses for the ML specialization. Can I
+still choose it for my specialization?
+
+","You may consider Big Data for Health and Reinforcement Learning for
+Electives. [https://plus.google.com/116856497997572703650/posts/KEmc9TzoQGv](h
+ttps://www.google.com/url?q=https://plus.google.com/116856497997572703650/post
+s/KEmc9TzoQGv&sa=D&ust=1473318513128000&usg=AFQjCNHeW0h_B3kp06Fm0YOOT_d9I1AycA
+)
+
+##",google+
+" When applying do you have to upload official transcripts or are
+unofficial transcripts fine?
+
+","[Unofficial transcripts are fine during
+application](https://www.google.com/url?q=http://omscs.gatech.edu/prospective-
+students/faq&sa=D&ust=1473318513129000&usg=AFQjCNEnMV4Cfd_UlqzdYGOnx6464PtLCA)
+. You must send the official copy once admitted.
+
+##",google+
+" How can I send and receive gatech emails using an external Gmail
+account?
+
+","From [here](https://www.google.com/url?q=https://plus.google.com/1102999295
+78536405206/posts/MZewDWaqiJz&sa=D&ust=1473318513131000&usg=AFQjCNEQ7E0JKN_kJW
+NVUaRxuFs9YM7yOA) and [here](https://www.google.com/url?q=https://plus.google.
+com/108687525543258157215/posts/GJ5co2b8cSL&sa=D&ust=1473318513132000&usg
+=AFQjCNHVw0HcMK095eJBqGTQ686dtL-EKg):
+
+  1. Activate 2-step verification in your gmail account.
+  2. Create an ""app password"" here: [https://security.google.com/settings/security/apppasswords](https://www.google.com/url?q=https://security.google.com/settings/security/apppasswords&sa=D&ust=1473318513133000&usg=AFQjCNEvUkSL7Wn-gOg99XxR17iQSwb7rQ) (if you don't have 2-step, it seems this link won't work)
+  3. Configure gmail: Settings > Accounts and Import > Add another email address you own > Enter your gatech email > Use ""[smtp.gmail.com](https://www.google.com/url?q=http://smtp.gmail.com&sa=D&ust=1473318513134000&usg=AFQjCNFmecN6D_w1Dx5ZNd3KR-yw0tFe-A)"" as SMTP server, user your mail@gmail address as username, and custom app password.
+
+##",google+
+" How can I forward my GT emails to an external account
+
+","Try http://emailtoolbox.gatech.edu/eform/submit/store-and-forward
+
+##",google+
+" Veterans: How to calculate BAH for OMS students.
+
+","Full time for GA Tech is 12 hours (4 classes).  BAH info:
+[http://militarybenefits.info/post-911-gi-bill-bah-rate-online-
+colleges/](https://www.google.com/url?q=http://militarybenefits.info/post-911
+-gi-bill-bah-rate-online-
+colleges/&sa=D&ust=1473318513138000&usg=AFQjCNHVqt4ghw1da9hPH6sD7Xli8Dj34g)
+based on how many hours you are taking.",google+
+What are the admission criteria for the OMS CS degree program?,"Preferred qualifications for admitted OMS CS students are an undergraduate
+degree in computer science or related field (typically mathematics, computer
+engineering or electrical engineering) from an accredited institution with a
+cumulative GPA of 3.0 or higher. Applicants who do not meet these criteria
+will be evaluated on a case-by-case basis; significant professional or other
+work experience with supporting recommendations may qualify as an adequate
+substitute for the appropriate academic credentials, however work experience
+will not take the place of an undergraduate degree. Georgia Tech will not
+admit applicants into the OMS CS degree program without the minimum
+qualifications for success. The Georgia Tech minimum criteria used in
+determining each applicant's eligibility for consideration shall include:
+
+Evidence of award of a bachelor's degree or its equivalent (prior to
+matriculation) from a recognized institution, demonstrated academic
+excellence, and evidence of preparation in their chosen field sufficient to
+ensure successful graduate study; and
+
+For international applicants, satisfactory scores on the Test of English as a
+Foreign Language (TOEFL).",official-omscs
+"I don't have the academic credentials for full admission now, but I would like to work toward that. What advice do you have?","The best advice is to take (and pass) courses in computer science from an
+accredited institution. If you don't have a computing background, passing
+these courses will present its own challenges and give you a preview of what
+the OMS CS curriculum will be like. If you have a computing background (either
+academically or professionally) and just need to plug a few holes, such
+courses are a great way to do it. All applicants to the OMS CS or other
+graduate degree program must meet the Georgia Tech minimum admission criteria
+(see above), **however admission is not guaranteed for those who meet the
+minimum criteria**.",official-omscs
+"If I meet the admission criteria, am I automatically admitted?","No applicant is automatically admitted.  All applications are reviewed by a
+faculty committee to ensure that those admitted can succeed in the program.
+Applicants who are selected for admission will be conditionally admitted into
+the degree program and must pass their first two OMS CS foundational courses
+with a grade of B or better to be fully admitted. Students do not need to take
+these foundational courses before registering for elective courses, however we
+recommend students take at least one foundational course per semester in which
+they are enrolled until they are fully admitted to Georgia Tech.",official-omscs
+What are the foundational courses?,"They are indicated in the course listing on the [Program
+Information](http://www.omscs.gatech.edu/program/) page of this website.",official-omscs
+What kind of proof of U.S. citizenship is required?,"For more information on accepted proof of citizenship, please visit [the
+Georgia Tech graduate admissions website](http://www.grad.gatech.edu/lawful-
+presence).
+",official-omscs
+I'm not a U.S. citizen and/or don't live in the United States. May I still apply?,"
+Yes, subject to [U.S. export control
+policy](http://researchintegrity.gatech.edu/about-export/export_overview/).",official-omscs
+How does the admissions process work?,"Prospective students will have to furnish materials commonly required for
+graduate admissions (prior degrees, transcripts, etc.). For full information
+about application requirements, please visit the [Program
+Information](http://www.omscs.gatech.edu/program/) page of this website.",official-omscs
+Do applicants need to take the GRE?,No,official-omscs
+When can I apply?,"
+Application periods, including deadlines, will be announced on the OMSCS
+website under the [Program Information](http://www.omscs.gatech.edu/program-
+information) page. You can also receive application information by joining the
+[OMS CS mailing list](http://eepurl.com/4GFP9).",official-omscs
+How do I apply?,"First, review the information on the [Program
+Information](http://www.omscs.gatech.edu/program/) page, which explains the
+relevant dates, costs and student information necessary for application.
+During application windows, a link to the OMS CS application site will be
+posted on the Program Information page.",official-omscs
+"If my country's primary language is English, do I still have to provide a TOEFL score?","Exceptions are given to the applicants from countries where English is the
+SOLE OFFICIAL language of instruction (Australia, Bahamas, Barbados, Canada-
+except Quebec province, England, Ghana, Ireland, Jamaica, Kenya, New Zealand,
+Nigeria, Scotland, St. Vincent and the Grenadines, Singapore, Trinidad,
+Tobago, Uganda and Wales). An applicant is exempt from TOEFL only if they are
+a naturalized citizen, a Green Card holder or have spent at least one year in
+residence and enrolled at a U.S. college or university.  
+  
+_Please visit the [Georgia Tech Catalog - TOEFL for International Students
+page](http://catalog.gatech.edu/admissions/grad/toefl/) for further
+information regarding TOEFL requirements._",official-omscs
+Can I submit my TOEFL score after the application process ends?,"No. TOEFL scores are due upon completion of your application.  
+  
+_[Lawful
+Presence](http://www.grad.gatech.edu/helpdesk/knowledgebase.php?category=5)_  
+Under Policy 4.1.6, the lawful presence of any student applying to an
+institution must be verified before a final offer of admission can be
+extended. This policy applies to any student admitted for the Georgia Tech
+Fall 2011 semester or any semester thereafter. If the student will remain
+living outside of the U.S. and will be enrolling only in distance education
+courses, then it is not necessary to verify lawful presence. International
+students residing outside the United States do not need to submit proof of
+lawful presence. All other applicants must submit proof of lawful presence.
+Please visit the [Lawful Presence
+page](http://www.grad.gatech.edu/helpdesk/knowledgebase.php?category=5) of our
+website for a complete list of acceptable lawful presence documents.",official-omscs
+What is meant by official or unofficial transcripts? When can I send them?,"Official transcripts can be delivered in several ways. Most common are those
+delivered directly to Georgia Tech from your academic institution. Some
+institutions also provide certified PDFs to alumni for use in graduate
+applications, as well as sealed, physical transcripts. If you are accepted to
+OMS CS, you will be asked to verify your unofficial transcript provided at the
+time of application with an official copy through one of these methods.",official-omscs
+I am an international student. Do I need to have my transcripts translated or converted?,"You will be asked to provide an unofficial English translation of your
+transcript upon application. If your undergraduate institution does not grade
+on a 4.0 scale, you do NOT need to convert your GPA. The Office of Graduate
+Studies does not accept self-converted GPA's and will do their own conversion.",official-omscs
+How many recommenders will I need? What is the process?,"Applicants must procure recommendations from three individuals. As part of the
+application, applicants will provide their recommenders' email addresses.
+Those individuals will be contacted through email and provided instructions on
+how to submit their recommendations online. A physical letter will not be
+required.",official-omscs
+How do I provide criminal and academic misconduct history?,"On the OMS CS application, you will be asked to report your own history to be
+verified by Georgia Tech's Office of Graduate Admissions.",official-omscs
+Is there a cap on admissions?,"There is no hard cap on admissions, however Georgia Tech and Udacity are
+controlling enrollments until the necessary infrastructure is in place to
+deliver a high-quality, supported degree program to enrolled students. The
+inaugural admissions class for Spring 2014 included about 400 students, and
+this number will scale up gradually over time.",official-omscs
+When will the program start and run until? What's the academic calendar and schedule for the program?,"All relevant dates are maintained on the [Program
+Information](http://www.omscs.gatech.edu/program/) page.",official-omscs
+"What is the curriculum, and how does it compare to the curriculum for the residential degree?","The curriculum in the pilot OMS CS will represent a subset of the on-campus
+curriculum, allowing for a full MS in computer science but with only some of
+the specializations available in the on-campus program. The OMS CS curriculum
+will expand as more courses come online.",official-omscs
+I don't have a formal education. Do I still qualify for the program?,"Georgia Tech grants graduate admission only to applicants who have a
+bachelor's degree or its equivalent prior to matriculation.",official-omscs
+May I take OMS courses for college credit without being enrolled in the degree program?,"No, Georgia Tech does not currently offer OMS courses for credit to students
+not enrolled in the degree program.",official-omscs
+"I'm not interested in the degree program, credentials or credit, but I would like to take the courses for free. Is this possible?","Yes, the OMS courses are available for free on the [Udacity
+website](https://www.udacity.com/). These free courses do not carry college
+credit and offer limited academic support.",official-omscs
+Can this degree program be audited if I already have an MS CS degree?,"Not at first. We will provide additional program tracks following successful
+launch of the degree program, including possibly an audit track.",official-omscs
+"Will the degree I receive from the OMS CS program be the same as the on-campus MS in Computer Science or will my degree say ""Online""?","Your diploma will read ""Master of Science in Computer Science,"" exactly the
+same as those of on-campus graduates. There will be no ""online"" designation
+for the degrees of OMS CS graduates.
+
+#### About the Degree Program",official-omscs
+When can people sign up for the courses?,"All relevant dates are maintained on the [Program
+Information](http://www.omscs.gatech.edu/program/) page.",official-omscs
+What courses are available?,"Course offerings are listed on the [Program
+Information](http://www.omscs.gatech.edu/program/) page.",official-omscs
+How many total hours are required?,"Georgia Tech's M.S. in Computer Science requires a minimum of 30 credit hours
+for completion.",official-omscs
+What specializations will eventually be available as part of this program?,"Specialization offerings are listed on the
+[Specializations](http://www.omscs.gatech.edu/program-info/specializations)
+page of this website.",official-omscs
+What are the technical requirements for the OMS CS curriculum?,"We highly recommend OMS CS students have access to a broadband or other high-
+speed Internet connection. More specific technical requirements are specified
+on the [Udacity website](https://www.udacity.com/for-credit-tech-
+requirements).",official-omscs
+Will all courses be taught in English?,"Yes. International students applying to OMS CS degree program are required to
+submit a TOEFL score (Test of English as a Foreign Language) of at least 100
+as part of their application.",official-omscs
+"What type of instructor contact will I have? Email, phone, chat?","The OMS CS program will have a tiered structure of human support for students,
+typically involving electronic (email, discussion board) interaction with
+course personnel, including the instructor of record.",official-omscs
+How many courses may I take at a time?,"Students may take only up to two courses until they pass their foundational
+requirement. Once fully admitted, the maximum number of hours a student may
+take is nine hours a semester (three courses). **Be advised that each course
+is just as rigorous as its on-campus equivalent.** We recommend that OMS CS
+degree-seeking students working full-time while taking courses enroll in no
+more than two courses simultaneously.",official-omscs
+"How much time can I expect to spend on reading, course assignments, etc.?","This is difficult to estimate, since all students have different learning
+styles. A general rule is three hours a week per credit hour, in addition to
+viewing the course videos. Therefore someone taking two courses at three
+credit hours each can expect to spend roughly 18 hours per week on coursework.",official-omscs
+Will I be required to purchase textbooks?,"Possibly. We anticipate most course materials will be provided free of charge
+online, however some courses may require additional purchases for materials.",official-omscs
+How does the student workload compare to a residential degree? How many hours a week will students spend on it?,"The total workload is the same as the residential program. The weekly or
+hourly workload depends on how quickly students wish to complete the program.",official-omscs
+How long does it take to complete and receive a degree?,"We anticipate the typical time for students to complete the OMS CS will be
+about three years, though we will allow for longer enrollments--up to six
+years--for those students who need greater flexibility.",official-omscs
+How will you guarantee academic honesty?,"All exams are proctored using national proctoring standards. We have access to
+4,500 physical proctoring facilities and are working with online proctoring
+institutions.",official-omscs
+How do I locate a proctoring facility?,"All proctoring is currently being done online. We continue to explore other
+options.",official-omscs
+"How will you handle grading? Will each student be evaluated individually by a human being, or is there an automated process?","Grading will be the privilege and responsibility of Georgia Tech's
+instructors. We will leverage MOOC technology to automate aspects of the
+grading process, using a significant portion of the tuition fee to support the
+scaling of student evaluation through such technologies. Similar techniques
+already are in use at Georgia Tech to handle grading in classes with very
+large enrollments.",official-omscs
+May I work full-time while enrolled in OMS CS degree program?,"Yes. OMS CS is designed to be flexible enough to accommodate the work/life
+situations of many types of students.",official-omscs
+Can I qualify for Optional Practical Training (OPT) if I complete the program?,"No. International students applying to OMS will not be offered visas, hence
+they will not qualify for OPT.",official-omscs
+"What are the expectations for enrollment, ****coursework**** and performance beyond the pilot cohort?**** ","Admitted degree-seeking students are expected to continue making progress
+through the program and can take up to 9 hours in a given semester. OMS CS
+staff and faculty recommend a maximum of 6 hours per semester for students who
+are also working full time.",official-omscs
+"Will there be a graduation ceremony? If so, are we required to attend?","As of Spring 2016, OMS students are participating in the Graduate Commencement
+Ceremony that is held on campus for Fall and Spring graduates. Participation
+is not required but is welcomed.",official-omscs
+How will this degree appear on my diploma and/or transcript?,"The name ""Online Master of Science"" is an informal designation to help both
+Georgia Tech and prospective students distinguish the delivery method of the
+OMS program from our on-campus degree. The degree name in both cases is Master
+of Science in Computer Science.
+
+#### Cost and Transfer Credit",official-omscs
+How much does the degree program cost?,"Exact cost will depend on how quickly students complete the program. We
+anticipate that working students will take an average of two courses per term,
+resulting in a total program cost of about $6,600 over five terms. Students
+who complete their programs more quickly will pay less; those who take longer
+will pay more.",official-omscs
+Am I eligible to receive financial aid for OMS CS?,"Yes. All federal financial aid benefits and restrictions apply to enrolled OMS
+CS students. Federal aid enrollment requirements apply.",official-omscs
+What is the payment schedule for the program?,"For all program costs and schedules, please see the [Program
+Information](http://www.omscs.gatech.edu/program/) page.",official-omscs
+I'm an international student currently enrolled at another U.S. program. May I be granted an I-20 to leave my current program and apply to OMS CS?,"No. Georgia Tech will not support visas for OMS CS students. International
+students do not require U.S. residency to enroll in OMS CS.",official-omscs
+I'm enrolled in a master's program at another university. May I transfer to OMS CS?,"Graduate students may not ""transfer"" to Georgia Tech in the same manner that
+undergraduates can transfer; however, you are free to apply to the OMS
+program. The Institute limits the number of M.S. transfer credits to six
+hours, subject to the approval of the College of Computing.",official-omscs
+I'm enrolled in a Georgia Tech M.S. program. May I transfer to OMS CS?,"You must reapply for admission to OMS CS and meet all program requirements.
+
+#### Why the OMS CS?",official-omscs
+Why is Georgia Tech doing this?,"Georgia Tech in general, and the College of Computing in particular, are
+committed to fully incorporating disruptive educational technologies into the
+value the Institute provides to its stakeholders. The development of massive-
+online educational models bring an unprecedented opportunity to extend access
+to high-quality education to an exponentially larger number of people, from
+around the world, than we can accommodate on a physical campus. Our
+educational mission as a public university is to explore and maximize such
+opportunities.",official-omscs
+What's new about this approach?,"It will be the first professional Online Master of Science degree in computer
+science that can be earned completely through the ""massive online"" format. It
+shows how leaders from MOOC, industry and academia can join to offer an
+advanced degree program on a massive and affordable scale. We believe this
+program can establish corporate acceptance of high-quality and 100 percent
+online degrees as being on par with degrees received in traditional on-campus
+settings, and serve as a blueprint for helping the United States address the
+shortage of people with advanced computer science and other STEM skills.",official-omscs
+Why ****computer**** science?,"There are an estimated 3 million open technology positions in the job market
+today. Training skilled computing professionals is a societal need, and that
+is a challenge Georgia Tech, Udacity and AT&T want to address.",official-omscs
+How does computer science lend itself to evaluation using the massive-online approach?,"Often computer science problems have a right or wrong answer and lend
+themselves to objective, rather than subjective, assessment and evaluation.
+This is what makes computer science amenable to the MOOC platform. In
+instances where this is not the case, we will apply the resources necessary to
+evaluate and assess student performance.",official-omscs
+Will Georgia Tech offer other degrees in this format?,Georgia Tech has no plans at this time to launch other massive-online degrees.,official-omscs
+Why has AT&T decided to jump into the world of online higher education?,"AT&T believes the disruptive power of the MOOC (Massive Online Open Course)
+platform can help address the shortage of engineers and other technical-
+degreed talent in the United States. By making graduate degrees and
+certifications available online at very affordable rates, Udacity, Georgia
+Tech and AT&T are eliminating barriers for many students unable to afford or
+access an advanced degree, and increasing the pipeline for the next generation
+of technology leaders. STEM skills are essential across business segments in
+today's digital economy.
+
+#### About the Collaborators",official-omscs
+"What makes Udacity the ""right"" delivery vehicle for this?","Udacity has been a leader in the creation of the modern MOOC and has been
+dedicated to high-quality online education and improving learning outcomes.
+The Udacity platform and services offer unprecedented scale for online higher
+ed. Additionally, Udacity has a strong focus on innovations in online pedagogy
+and active learning that complements Georgia Tech's faculty.",official-omscs
+Why is Udacity collaborating with Georgia Tech? Why not ****other**** universities?,"Udacity has already collaborated with other universities, including San Jose
+State University in California, and the company always seeks to work with
+like-minded institutions that have a desire to broaden access to higher
+learning through an innovative use of educational technology.  Georgia Tech's
+computer science department is one of the very best in the world and offers a
+master's program of the highest caliber. The company is excited to work with
+Georgia Tech to offer an affordable and accessible degree program through the
+Udacity platform.",official-omscs
+Is Udacity planning other degrees with other universities?,"We are trying out this new concept for the first time with Georgia Tech, which
+will keep us busy for a while. However, we're always looking for new
+opportunities to bring affordable, accessible education to a broader group of
+people.",official-omscs
+Is Udacity shifting away from its strategy of collaborating with corporations for skills-based classes?,"This is not at all a shift away, but a natural complement to the high tech,
+industry skill courses Udacity builds together with not just AT&T but the
+Googles, Autodesks, NVIDIAs of the world. Many of these companies are
+employers of Georgia Tech alumni and look forward to seeing opportunities for
+talent from both the degree program and from the more industry-focused
+classes.",official-omscs
+Why is AT&T the corporate collaborator for this initiative?,"As a premier global communications company and a champion for innovation in
+education, AT&T will provide technology access, connectivity and products at
+inception, as well as evolving service and platform support. The company will
+serve on an advisory board and, where appropriate, offer corporate projects
+for credit, be a source from which Georgia Tech draws curriculum content and
+guest instructors and offer internship opportunities to select students. AT&T
+will tap into the program to train its own employees and will recruit
+graduates.",official-omscs
+Why is AT&T collaborating with Georgia Tech and Udacity?,"Georgia Tech is an international leader in scientific and technological
+research and education.  Our company is already well-stocked with Georgia
+Tech-educated talent and this will give us even greater access to their world-
+class resources. Meanwhile, Udacity has brought the effectiveness of MOOCs to
+a new level, working tirelessly to improve learning outcomes. Udacity's
+platform and services offer unprecedented scale for online higher education.
+Founder Sebastian Thrun's leadership and passion for an educated humanity are
+a catalyst for re-engineering online learning and his company is [widely
+recognized](http://www.fastcompany.com/most-innovative-
+companies/2013/industry/education) as one of the most innovative companies in
+education.",official-omscs
+What is the extent of AT&T's involvement? Is the company providing more than financial resources and the initial student cohort?,"AT&T will be the founding corporate collaborator of the program, contributing
+$2 million to the initiative, in addition to providing technology access,
+connectivity and products at inception, as well as evolving service and
+platform support. The company will serve on an advisory board and, where
+appropriate, offer corporate projects for credit, be a source from which
+Georgia Tech draws curriculum content and guest instructors, and offer
+internship opportunities to select students. AT&T will tap into the program to
+train its own employees and will recruit graduates.",official-omscs
+How will AT&T technologies be integrated into the program?,"AT&T will provide technology access, connectivity and products at inception,
+as well as evolving service and platform support.  We're further defining that
+engagement as part of the pilot.",official-omscs
+Is AT&T helping to determine the curriculum?,"Where appropriate and subject to the approval of a GT faculty committee, we
+will offer corporate projects for credit and be a source from which Georgia
+Tech draws curriculum content and guest instructors.
+
+#### MOOCs, Education & Learning",official-omscs
+What kind of evidence do you have to support positive educational outcomes for the MOOC delivery format?,"Udacity evolved the MOOC format into one for which the company has proven
+learning outcomes and high retention rates. The evidence stems from an
+independent study funded by the National Science Foundation, as well as
+various smaller-scale evaluations. Still, Udacity believes the OMS CS enters
+uncharted territory. Student outcomes are of utmost importance, and resources
+will be dedicated to conducting independent evaluations of educational and
+job-placement outcomes.",official-omscs
+How do Udacity MOOCs differ from other platforms?,"Udacity MOOCs differentiate themselves in two significant ways. First, Udacity
+courses focus on active student learning and student experience, by using
+interactive and collaborative elements pervasively throughout our courses.
+Second, Udacity provides human services in the form of student mentoring. In
+past classes, we found that the Udacity formula can attain 100 percent
+retention, compared to less than 4 percent for a conventional MOOC.",official-omscs
+How much does it cost Udacity to produce a MOOC?,"While the actual cost remains to be seen and can vary from course to course,
+Udacity typically budgets about $200,000 per class. Udacity is committed to
+the highest quality of service, and OMS CS MOOCs will be developed by teams of
+people, led by the Georgia Tech instructor.",official-omscs
+Does Udacity own the MOOCs it produces?,"Udacity makes no claim with respect to the intellectual property of the
+instructor or Georgia Tech.
+
+#### The Need for STEM Education",official-omscs
+Why do working professionals need this degree? Can't they just enroll in classes?,"The United States is facing a severe shortage of skilled workers in STEM
+fields. The Georgia Tech master's degree in computer science represents an
+achievement and skill set that companies like AT&T value and want more of
+their employees to have. The OMS CS program will produce graduates on par with
+those receiving degrees from an on-campus program, and will also bestow skills
+certifications for employees who complete designated coursework and take
+proctored exams.",official-omscs
+Why does AT&T care about education and STEM-skills programs in particular?,"AT&T hires about 30,000 employees a year, and STEM skills are required across
+its business. It's clear that the United States must develop a robust pipeline
+of skilled STEM workers to remain globally competitive; many jobs are going
+unfilled as candidates lack the necessary skills, training or degrees. STEM
+jobs are projected to grow by 17 percent over the next six years, compared to
+10 percent for other professions. Through this program, Georgia Tech will be
+able to offer employers like AT&T a larger and more diverse pool of highly
+qualified STEM-trained workers.",official-omscs
