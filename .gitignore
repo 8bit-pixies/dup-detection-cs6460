@@ -50,3 +50,6 @@ Temporary Items
 *.bin.gz
 
 *.pyc
+*.csv
+*.zip
+*.7z
