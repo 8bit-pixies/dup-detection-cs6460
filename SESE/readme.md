@@ -9,5 +9,7 @@ Tags with the most dups; based on `dups.csv`:
 *  SQL (~360)
 *  javascript + html (~860)
 
-sql-tags
-========
+Stackexchange data
+==================
+
+[Use this query creator](https://data.stackexchange.com/stackoverflow/query/edit/559789) and download in 50000 batches...
