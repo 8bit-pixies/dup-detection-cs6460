@@ -13,11 +13,19 @@ def collapse_spaces(x):
     x = re.sub(r'\s+', ' ', x)
     return x.strip()
 
+def split_tags(x):
+    import re
+    x = re.sub(r'[<>]+', ' ', x)
+    return x.strip()
+
 # clean up body 
 so_dat = pd.read_csv("SESE/sql-html-js-1.csv", nrows=50000)
 
+# convert each row to json to be read in by spark.
 so_dat_main = so_dat[['id', 'title', 'body', 'tags']]
 so_dat_main['body'] = pd.Series([collapse_spaces(h.handle(x)) for x in so_dat_main['body'].tolist()])
+
+so_dat_main['tags'] = pd.Series([split_tags(x) for x in so_dat_main['tags'].tolist()])
 
 # now try to train... lda for the body...
 
@@ -45,3 +53,7 @@ texts = [tokenize(x) for x in so_dat_main['body'].tolist()]
 dictionary = gensim.corpora.Dictionary(texts)
 new_corpus = [dictionary.doc2bow(text) for text in texts]
 lda.update(new_corpus)
+
+
+
+
