@@ -55,11 +55,13 @@ duplicate question, Piazza
 
 To understand and be able to explain quality posts, the type of modelling we are after is explanatory modelling, where we seek to provide causal explanations. One key consideration is that Shmueli\cite{modpred} describes how explanatory modelling does not always generalise well to predictive models. Shumueli\cite{modpred} also notes that the choice between explanatory and predictive modelling may affect the type of variables you use (variables have to make sense from a causal perspective), the type of preprocessing you may perform (data compression methods such as SVD may be inappropriate from a causal perspective), types of models you may build (ensemble of models would be inappropriate from a causal perspective). 
 
-Comparing with previous studies, we are aiming to demonstrate how these techniques can be used in an online learning context. Online learning focuses on modelling data which arrives in sequential order to update our best predictor for future data as opposed to training on the whole training data set at once. This is important part of this project as with young communities, often the whole training data set will not be available until the community is relatively mature. Pal \emph{et al.}\cite{pal} explains that early identification and engagement with these users  can improve the experience of these users and more importantly improve the overall quality of participation within a community. Within Pal \emph{et al.}\cite{pal} retrospective analysis, it had already shown that some of the potential experts had already left the community when the analysis concluded leading to missed opportunities within the community.
+Comparing with previous studies, we are aiming to demonstrate how these techniques can be used in an online learning context. Online learning focuses on modelling data which arrives in sequential order to update our best predictor for future data as opposed to training on the whole training data set at once. This is important part of this project as with young communities, often the whole training data set will not be available until the community is relatively mature. This research would be similar to Zhang \emph{et al}\cite{dupred} conducted similar experiment with duplicate question detection via batch learning. Pal \emph{et al.}\cite{pal} explains that early identification and engagement with these users  can improve the experience of these users and more importantly improve the overall quality of participation within a community. Within Pal \emph{et al.}\cite{pal} retrospective analysis, it had already shown that some of the potential experts had already left the community when the analysis concluded leading to missed opportunities within the community. 
+
+
 
 Furthermore to understand the type of questions which a community is asking can allow the noise to be diminished. For example on roughly 13 October 2016 the OMSCS admission results for Spring 2017 intake was annouced. Out of the newest 15 posts, 9 of them were new students questions or notes, with two threads having over 60 posts altogether. Similarly, reddit had 5 of 7 posts within the last 24 hours about new admissions, with 42 out of 44 comments in the respective posts in the threads on admissions.
 
-Having adaptive duplication detection not only assists in special events but also in young communities, where there is a lack of training data or examples to create a sensible detection for duplicated questions. On forums like Piazza this would assist in reducing the amount of clutter which exists, similar to how stackoverflow closes duplicate questions for redundant questions to decrease the maintenance and people's resources on answering the same question. 
+Having adaptive duplication detection not only assists in special events but also in young communities, where there is a lack of training data or examples to create a sensible detection for duplicated questions. On forums like Piazza this would assist in reducing the amount of clutter which exists, similar to how stackoverflow closes duplicate questions for redundant questions to decrease the maintenance and people's resources on answering the same question\cite{dupred}. 
 
 The following usage scenarios demonstrate the benefits of such a tool. 
 
@@ -169,11 +171,17 @@ Logistic regression would probably be good enough...
 
 \subsection{Experimental Setup}
 
-Based on synthetic, Piazza, Google plus. 
+Our online learning model is evaluated on historical questions in Stack Overflow. We parse data for `html' and `javascript' tags from January 2008 to October 2016 using Stackexchange API. We extract approximately 750 000 questions over 10 month period. 
+
+A Python library called Gensim was used to extract fields from the questions. Gensim is a flexible Python library statistical semantics.
 
 \subsection{Evaluation Metrics}
 
-Which one to use and why?
+To evaluate the performace, we will use recall-rate which is also used in \cite{dupred}
+
+$$
+\text{recall-rate} = \frac{N_\text{detected}}{N_\text{total}}
+$$
 
 \subsection{Research Questions and Findings}
 
@@ -190,6 +198,8 @@ Threats to construct validity - suitability of evaluation metrics
 \section{Related Work}
 
 Besides what has been in the proposal, links to online learning, such as vowpal wabbit:
+
+Zhang \emph{et al}\cite{dupred} 
 
 \section{Conclusion}
 

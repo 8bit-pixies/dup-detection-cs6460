@@ -16,6 +16,15 @@ def bad_word(text):
         return True
     return False
 
+def train_corpus(text, dictionary):
+    """text is list of sentences/body of question"""
+    texts = [tokenize(x) for x in text]
+    corpus = [dictionary.doc2bow(text) for text in texts]
+    return corpus
+    
+def transform_doc2bow(text, dictionary):
+    return dictionary.doc2bow(tokenize(text))
+
 dictionary = gensim.corpora.Dictionary()
 
 for fname in [

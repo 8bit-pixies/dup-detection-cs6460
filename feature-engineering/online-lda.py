@@ -25,14 +25,7 @@ lda[corpus[0]]
 import gensim
 import pandas as pd
 
-from create_dictionary import tokenize
-
-
-def train_corpus(text, dictionary):
-    """text is list of sentences/body of question"""
-    texts = [tokenize(x) for x in text]
-    corpus = [dictionary.doc2bow(text) for text in texts]
-    return corpus
+from create_dictionary import train_corpus
 
 # create dictionary, as gensim doesn't have an implementation for infinitely large
 # dictionaries at this stage.

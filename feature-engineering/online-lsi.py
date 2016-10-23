@@ -35,3 +35,44 @@ lsi[corpus2[1]]
 # https://github.com/RaRe-Technologies/gensim/issues/74
 # https://groups.google.com/forum/#!topic/gensim/HvkeM2wAgMY
 """
+
+import gensim
+import pandas as pd
+import gc
+
+from create_dictionary import train_corpus, transform_doc2bow
+
+dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
+lsi = gensim.models.lsimodel.LsiModel(id2word=dictionary, num_topics=200)
+
+
+for fname in [
+"../SESE/cleaned/sql-html-js-2",
+#"../SESE/cleaned/sql-html-js-1",
+#"../SESE/cleaned/sql-html-js-3",
+#"../SESE/cleaned/sql-html-js-4",
+#"../SESE/cleaned/sql-html-js-5"
+]:
+
+    for i, so_dat in enumerate(pd.read_csv(fname+"_fix.csv", chunksize=5000)):
+        if i == 0:
+            print(fname)
+        print(i)
+        so_dat_main = so_dat[['id', 'title', 'bodyString', 'tagsString']]
+
+        corpus = train_corpus(so_dat_main['bodyString'].tolist(), dictionary)
+        lsi.add_documents(corpus, chunksize=1000, decay=0.99999)
+        del so_dat_main
+        del corpus
+        gc.collect()
+
+lsi.save("../data/lsi.gz")
+# to get output...
+"""
+sample_doc = so_dat_main['bodyString'].tolist()[0]
+lsi[transform_doc2bow(sample_doc, dictionary)]
+"""
+
+
+
+
