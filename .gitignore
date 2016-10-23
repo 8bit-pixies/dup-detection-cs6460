@@ -54,3 +54,7 @@ Temporary Items
 *.zip
 *.7z
 *.json
+
+*.gz
+
+paper/future work/*
