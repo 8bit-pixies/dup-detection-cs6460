@@ -71,7 +71,15 @@ lsi.save("../data/lsi.gz")
 """
 sample_doc = so_dat_main['bodyString'].tolist()[0]
 lsi[transform_doc2bow(sample_doc, dictionary)]
+
+# to check similarity
+index = similarities.MatrixSimilarity(lda[corpus])
+sims = index[lda[vec_bow]] # where vec_bow is created from saved dictionary model...`vec_bow = dictionary.doc2bow(...)`
+
+# http://radimrehurek.com/topic_modeling_tutorial/3%20-%20Indexing%20and%20Retrieval.html
 """
+
+
 
 
 
