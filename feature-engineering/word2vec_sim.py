@@ -65,14 +65,14 @@ def getAvgFeatureVecs(reviews, model):
     
 def sim_two_w2v(doc1, doc2, model):
     return cosine_similarity(makeFeatureVec(tokenize(doc1), model).reshape(1, -1), 
-                             makeFeatureVec(tokenize(doc2), model).reshape(1, -1))[0][0]
-
+                  makeFeatureVec(tokenize(doc2), model).reshape(1, -1))[0][0]
+    
 
 # can update
 if __name__ == "__main__":
     
     sentences = [tokenize("It is not known exactly when the text obtained its current standard form"),
-                 tokenize("it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia"),
+                 tokenize("it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Sydney College in Virginia"),
                  tokenize("discovered the source of the passage sometime before 1982 while searching for instances of the Latin word")] 
     sentences2 = [tokenize("The physical source of the Lorem Ipsum text may be the 1914"), 
                   tokenize("ut I must explain to you how all this mistaken idea of denouncing of a pleasure and praising pain was born and I will give you a complete account of the system")]
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     model.train(sentences2)
     
     print sim_two_w2v("It is not known exactly when the text obtained its current standard form",
-                      "it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Hampden–Sydney College in Virginia")
+                      "it may have been as late as the 1960s. Dr. Richard McClintock, a Latin scholar who was the publications director at Sydney College in Virginia")
     
     makeFeatureVec(sentences[0], model)
     makeFeatureVec(sentences[1], model)
