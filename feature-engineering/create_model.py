@@ -6,10 +6,10 @@ import numpy as np
 from create_dictionary import train_corpus, transform_doc2bow, tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 
-from online_lsi_sim import sim_two_lsi
-from online_lda_sim import sim_two_lda
-from word2vec_sim import sim_two_w2v
-from doc_sim import sim_two
+from online_lsi_sim import sim_two_lsi, sim_all_lsi
+from online_lda_sim import sim_two_lda, sim_all_lda
+from word2vec_sim import sim_two_w2v, sim_all_w2v
+from doc_sim import sim_two, sim_all
 
 def sim_query(doc1, doc2, dictionary,
               lsi_mod, lda_mod, w2v_mod):
@@ -22,6 +22,7 @@ def sim_query(doc1, doc2, dictionary,
                'doc': sim_two(doc1, doc2)}
     
     return sim_vec, np.mean(np.array([x[1] for x in sim_vec.items()]))
+    
 
 
 dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
@@ -87,6 +88,9 @@ print sim_query(doc_text2[0], doc_text2[1], dictionary,
 
 """
 
+# step 2...figure out a way to do it for:
+# title...tags...description
+# and combine it for one big model and not pairwise either.
 
 
 

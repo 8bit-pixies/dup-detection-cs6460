@@ -21,11 +21,15 @@ from create_dictionary import train_corpus, transform_doc2bow
 import pandas as pd
 
 # or just do it on two things...
-def sim_two(doc1, doc2):
+def sim_two(doc1, doc2, dictionary):
     corpus = train_corpus([doc1, doc2], dictionary)
     index_sparse = gensim.similarities.docsim.SparseMatrixSimilarity(corpus, num_features=dictionary.num_docs)
     return index_sparse[transform_doc2bow(doc1, dictionary)][1]
 
+def sim_all(single, docs, dictionary):
+    corpus = train_corpus(docs, dictionary)
+    index_sparse = gensim.similarities.docsim.SparseMatrixSimilarity(corpus, num_features=dictionary.num_docs)
+    return index_sparse[transform_doc2bow(single, dictionary)]
                         
 dictionary = gensim.corpora.Dictionary.load("../data/SESE_tags.gz")
 

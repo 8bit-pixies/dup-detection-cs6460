@@ -67,7 +67,17 @@ def sim_two_w2v(doc1, doc2, model):
     return cosine_similarity(makeFeatureVec(tokenize(doc1), model).reshape(1, -1), 
                   makeFeatureVec(tokenize(doc2), model).reshape(1, -1))[0][0]
     
-
+def sim_all_w2v(single, docs, model):
+    """
+    cosine_similarity(np.array(dataSetI).reshape(1,-1), allSet)
+    
+    there should be a way to "save" or hash the vectors...
+    """
+    return cosine_similarity(makeFeatureVec(tokenize(single), model).reshape(1, -1), 
+                  [makeFeatureVec(tokenize(doc), model) for doc in docs])
+    
+    
+    
 # can update
 if __name__ == "__main__":
     

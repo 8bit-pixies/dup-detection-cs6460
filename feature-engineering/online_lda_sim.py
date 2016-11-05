@@ -17,7 +17,13 @@ def sim_two_lda(doc1, doc2, lda, dictionary):
     return cosine_similarity(extract_prob(lda[transform_doc2bow(doc1, dictionary)]), 
                              extract_prob(lda[transform_doc2bow(doc2, dictionary)]))[0][0]
 
-
+def sim_all_lda(single, docs, lda, dictionary):
+    def extract_prob(ls):
+        return np.array([x[1] for x in ls]).reshape(1,-1)
+    return cosine_similarity(extract_prob(lda[transform_doc2bow(single, dictionary)]), 
+                             [extract_prob(lda[transform_doc2bow(doc, dictionary)])
+                              for doc in docs])
+                             
 if __name__ == "__main__":
     
     dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")

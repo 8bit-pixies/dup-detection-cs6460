@@ -10,6 +10,11 @@ def sim_two_lsi(doc1, doc2, lsi, dictionary):
     index = gensim.similarities.docsim.MatrixSimilarity(lsi[corpus])
     return index[lsi[d2b1]][1]
 
+def sim_all_lsi(single, docs, lsi, dictionary):
+    corpus = train_corpus(docs, dictionary)
+    index_sparse = gensim.similarities.docsim.SparseMatrixSimilarity(lsi[corpus])
+    return index_sparse[transform_doc2bow(single, dictionary)]
+    
 if __name__ == "__main__":
     
     dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
