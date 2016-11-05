@@ -2,6 +2,7 @@
 import gensim
 import pandas as pd
 import numpy as np
+import scipy
 
 from create_dictionary import train_corpus, transform_doc2bow, tokenize
 from sklearn.metrics.pairwise import cosine_similarity
@@ -19,7 +20,7 @@ def sim_query(doc1, doc2, dictionary,
     sim_vec = {'lsi': sim_two_lsi(doc1, doc2, lsi_mod, dictionary),
                'lda': sim_two_lda(doc1, doc2, lda_mod, dictionary), 
                'w2v': sim_two_w2v(doc1, doc2, w2v_mod), 
-               'doc': sim_two(doc1, doc2)}
+               'doc': sim_two(doc1, doc2, dictionary)}
     
     return sim_vec, np.mean(np.array([x[1] for x in sim_vec.items()]))
     
@@ -35,7 +36,7 @@ so_dat_main = so_dat[['id', 'title', 'bodyString', 'tagsString']]
 corpus = train_corpus(so_dat_main['bodyString'].tolist(), dictionary)
 
 # all these models have online learning support
-lda_mod = gensim.models.ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=10)
+lda_mod = gensim.models.ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=10, minimum_probability=0.0)
 
 lsi_mod = gensim.models.lsimodel.LsiModel(corpus, id2word=dictionary, num_topics=100)
 
@@ -92,6 +93,12 @@ print sim_query(doc_text2[0], doc_text2[1], dictionary,
 # title...tags...description
 # and combine it for one big model and not pairwise either.
 
+
+# compare index with first 10
+doc_test = so_dat_main['bodyString'].tolist()[:10]
+single = so_dat_main['bodyString'].tolist()[20]
+
+sim_all_lda(single, doc_test, lda_mod, dictionary)
 
 
 
