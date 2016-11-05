@@ -48,8 +48,8 @@ w2v_mod.train(sentences)
 
 # `doc_mod` is not needed - determined upon run time
 # `tag_mod` is not needed - determined upon run time
-#print sim_query("html angular", "html javascript", dictionary,
-#                 lsi_mod, lda_mod, w2v_mod)
+print sim_query("html angular", "html javascript", dictionary,
+                 lsi_mod, lda_mod, w2v_mod)
 
 # say we update with another sample of documents
 print "preparing to update models..."
@@ -68,8 +68,8 @@ sentences2 = [tokenize(x) for x in so_dat_main['bodyString'].tolist()]
 w2v_mod.build_vocab(sentences2, update=True)
 w2v_mod.train(sentences2)
 
-#print sim_query("html angular", "html javascript", dictionary,
-#                 lsi_mod, lda_mod, w2v_mod)
+print sim_query("html angular", "html javascript", dictionary,
+                 lsi_mod, lda_mod, w2v_mod)
 
 """
 #######################################################################
@@ -105,9 +105,7 @@ single = so_dat_main['bodyString'].tolist()[20]
 
 #sim_all_lda(single, doc_test, lda_mod, dictionary)
 #sim_all_w2v(single, doc_test, w2v_mod)
-
 #sim_all_lsi(single, doc_test, lsi_mod, dictionary)
-
-
+#sim_all(single, docs, dictionary)
 
 
