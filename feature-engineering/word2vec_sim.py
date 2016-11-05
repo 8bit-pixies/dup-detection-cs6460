@@ -74,7 +74,7 @@ def sim_all_w2v(single, docs, model):
     there should be a way to "save" or hash the vectors...
     """
     return cosine_similarity(makeFeatureVec(tokenize(single), model).reshape(1, -1), 
-                  [makeFeatureVec(tokenize(doc), model) for doc in docs])
+                  np.vstack([makeFeatureVec(tokenize(doc), model) for doc in docs]))
     
     
     

@@ -99,6 +99,6 @@ doc_test = so_dat_main['bodyString'].tolist()[:10]
 single = so_dat_main['bodyString'].tolist()[20]
 
 sim_all_lda(single, doc_test, lda_mod, dictionary)
-
+sim_all_w2v(single, doc_test, w2v_mod)
 
 
