@@ -36,36 +36,41 @@ so_dat_main = so_dat[['id', 'title', 'bodyString', 'tagsString']]
 corpus = train_corpus(so_dat_main['bodyString'].tolist(), dictionary)
 
 # all these models have online learning support
+print "training lda..."
 lda_mod = gensim.models.ldamodel.LdaModel(corpus, id2word=dictionary, num_topics=10, minimum_probability=0.0)
-
+print "training lsi..."
 lsi_mod = gensim.models.lsimodel.LsiModel(corpus, id2word=dictionary, num_topics=100)
-
-w2v_mod = gensim.models.Word2Vec(min_count=1, sg=1)
+print "training word2vec..."
+w2v_mod = gensim.models.Word2Vec(min_count=5, sg=5)
 sentences = [tokenize(x) for x in so_dat_main['bodyString'].tolist()]
 w2v_mod.build_vocab(sentences )
 w2v_mod.train(sentences)
 
 # `doc_mod` is not needed - determined upon run time
 # `tag_mod` is not needed - determined upon run time
-print sim_query("html angular", "html javascript", dictionary,
-                 lsi_mod, lda_mod, w2v_mod)
+#print sim_query("html angular", "html javascript", dictionary,
+#                 lsi_mod, lda_mod, w2v_mod)
 
 # say we update with another sample of documents
-
+print "preparing to update models..."
 f_update = "../SESE/cleaned/sql-html-sample-update.csv"
 so_dat = pd.read_csv(fname)
 so_dat_main = so_dat[['id', 'title', 'bodyString', 'tagsString']]
 
+print "updating lda"
 corpus = train_corpus(so_dat_main['bodyString'].tolist(), dictionary)
 lda_mod.update(corpus)
+print "updating lsi"
 lsi_mod.add_documents(corpus, chunksize=1000, decay=0.99999) # decay to weigh newer data higher
 
+print "updating w2v"
 sentences2 = [tokenize(x) for x in so_dat_main['bodyString'].tolist()]
 w2v_mod.build_vocab(sentences2, update=True)
 w2v_mod.train(sentences2)
 
-print sim_query("html angular", "html javascript", dictionary,
-                 lsi_mod, lda_mod, w2v_mod)
+#print sim_query("html angular", "html javascript", dictionary,
+#                 lsi_mod, lda_mod, w2v_mod)
+
 """
 #######################################################################
 
@@ -98,7 +103,11 @@ print sim_query(doc_text2[0], doc_text2[1], dictionary,
 doc_test = so_dat_main['bodyString'].tolist()[:10]
 single = so_dat_main['bodyString'].tolist()[20]
 
-sim_all_lda(single, doc_test, lda_mod, dictionary)
-sim_all_w2v(single, doc_test, w2v_mod)
+#sim_all_lda(single, doc_test, lda_mod, dictionary)
+#sim_all_w2v(single, doc_test, w2v_mod)
+
+#sim_all_lsi(single, doc_test, lsi_mod, dictionary)
+
+
 
 

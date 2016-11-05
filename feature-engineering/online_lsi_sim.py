@@ -12,8 +12,8 @@ def sim_two_lsi(doc1, doc2, lsi, dictionary):
 
 def sim_all_lsi(single, docs, lsi, dictionary):
     corpus = train_corpus(docs, dictionary)
-    index_sparse = gensim.similarities.docsim.SparseMatrixSimilarity(lsi[corpus])
-    return index_sparse[transform_doc2bow(single, dictionary)]
+    index_sparse = gensim.similarities.docsim.SparseMatrixSimilarity(lsi[corpus], lsi.num_topics)
+    return index_sparse[lsi[transform_doc2bow(single, dictionary)]]
     
 if __name__ == "__main__":
     
