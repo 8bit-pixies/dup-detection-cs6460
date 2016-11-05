@@ -24,6 +24,23 @@ def sim_query(doc1, doc2, dictionary,
     
     return sim_vec, np.mean(np.array([x[1] for x in sim_vec.items()]))
     
+def sim_query_all(single, docs, dictionary,
+              lsi_mod, lda_mod, w2v_mod):
+    """takes in two documents and computes similarity between
+    both based on the models above, with all equal weights"""
+    
+    #sim_all_lda(single, doc_test, lda_mod, dictionary)
+    #sim_all_w2v(single, doc_test, w2v_mod)
+    #sim_all_lsi(single, doc_test, lsi_mod, dictionary)
+    #sim_all(single, doc_test, dictionary)
+    
+    sim_vec = {'lsi': sim_all_lsi(single, docs, lsi_mod, dictionary),
+               'lda': sim_all_lda(single, docs, lda_mod, dictionary), 
+               'w2v': sim_all_w2v(single, docs, w2v_mod), 
+               'doc': sim_all(single, docs, dictionary)}
+    
+    return sim_vec
+    
 
 
 dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
@@ -106,6 +123,6 @@ single = so_dat_main['bodyString'].tolist()[20]
 #sim_all_lda(single, doc_test, lda_mod, dictionary)
 #sim_all_w2v(single, doc_test, w2v_mod)
 #sim_all_lsi(single, doc_test, lsi_mod, dictionary)
-#sim_all(single, docs, dictionary)
-
-
+#sim_all(single, doc_test, dictionary)
+print sim_query_all(single, doc_test, dictionary,
+                 lsi_mod, lda_mod, w2v_mod)
