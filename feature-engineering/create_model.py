@@ -40,7 +40,39 @@ def sim_query_all(single, docs, dictionary,
                'doc': sim_all(single, docs, dictionary)}
     
     return sim_vec
+
+def sim_stackoverflow(single_dict, docs_df, columns, dictionary, 
+                      lsi_mod, lda_mod, w2v_mod):
+    """
+    single_dict is a dictionary...
     
+    docs_df is dataframe
+    
+    """
+    if columns is None:
+        columns = {'title': 'title', 
+                   'body': 'bodyString', 
+                   'tag': 'tagsString'}
+    body_sim = sim_query_all(single_dict[columns['body']], docs_df[columns['body']].tolist(), 
+                             dictionary, lsi_mod, lda_mod, w2v_mod)
+    title_sim = sim_query_all(single_dict[columns['title']], docs_df[columns['title']].tolist(), 
+                             dictionary, lsi_mod, lda_mod, w2v_mod)
+    tag_sim = sim_query_all(single_dict[columns['tag']], docs_df[columns['tag']].tolist(), 
+                             dictionary, lsi_mod, lda_mod, w2v_mod)
+    
+    # more efficient to exclude it in `sim_query_all`    
+    title_sim.pop('lda', None)
+    title_sim.pop('lsi', None)
+    
+    tag_sim.pop('lsi', None)
+    tag_sim.pop('lda', None)
+    tag_sim.pop('w2v', None)
+    
+    return {
+            'body': body_sim, 
+            'title': title_sim, 
+            'tag' : tag_sim            
+            }
 
 
 dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
@@ -126,3 +158,7 @@ single = so_dat_main['bodyString'].tolist()[20]
 #sim_all(single, doc_test, dictionary)
 print sim_query_all(single, doc_test, dictionary,
                  lsi_mod, lda_mod, w2v_mod)
+
+test = sim_stackoverflow(so_dat_main.iloc[21].to_dict(), so_dat_main.iloc[:20], None, dictionary, 
+                  lsi_mod, lda_mod, w2v_mod)
+
