@@ -73,9 +73,18 @@ dat_combine = pd.merge(so_dat_main, label_dat)
 
 # basically perform negative sampling to find weights to optimize these two cases....
 
-
 # do stuff and output training dataset....(figure out how...)
 # will be adhoc for future...
+
+# train for recall..
+
+# get the dups...
+
+
+
+test = sim_stackoverflow(so_dat_main.iloc[21].to_dict(), so_dat_main.iloc[:20], None, dictionary, 
+                      lsi_mod, lda_mod, w2v_mod)
+
 
 
 
