@@ -31,6 +31,10 @@ def try_convert(x):
     x = force_to_unicode(x)
     return collapse_spaces(h.handle(x.encode('ascii', 'ignore')))
     
+def try_convert_tags(x):
+    x = force_to_unicode(x)
+    return collapse_spaces(split_tags(x.encode('ascii', 'ignore')))
+    
     
 for fname in [
 "../SESE/2016_dups_only",
@@ -39,9 +43,9 @@ for fname in [
 ]:
     so_dat_main = pd.read_csv(fname+".csv")
     so_dat_main['bodyString'] = [try_convert(x) for x in so_dat_main['body'].tolist()]
-    so_dat_main['tagsString'] = [try_convert(x) for x in so_dat_main['tags'].tolist()]
+    so_dat_main['tagsString'] = [try_convert_tags(x) for x in so_dat_main['tags'].tolist()]
     so_dat_main['dbodyString'] = [try_convert(x) for x in so_dat_main['dbody'].tolist()]
-    so_dat_main['dtagsString'] = [try_convert(x) for x in so_dat_main['dtags'].tolist()]
+    so_dat_main['dtagsString'] = [try_convert_tags(x) for x in so_dat_main['dtags'].tolist()]
 
     so_dat_main = so_dat_main[['id', 'title', 'bodyString', 'tagsString', 'dbodyString', 'dtagsString', 'dtitle', 'did']]
     so_dat_main.to_csv(fname+"_fix.csv", index=False)

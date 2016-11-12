@@ -23,7 +23,8 @@ def sim_query(doc1, doc2, dictionary,
                'doc': sim_two(doc1, doc2, dictionary)}
     
     return sim_vec, np.mean(np.array([x[1] for x in sim_vec.items()]))
-    
+
+'''    
 def sim_query_all(single, docs, dictionary,
               lsi_mod, lda_mod, w2v_mod):
     """takes in two documents and computes similarity between
@@ -73,7 +74,7 @@ def sim_stackoverflow(single_dict, docs_df, columns, dictionary,
             'title': title_sim, 
             'tag' : tag_sim            
             }
-
+'''
 if __name__ == "__main__":
     dictionary = gensim.corpora.Dictionary.load("../data/SESE.gz")
     fname = "../SESE/cleaned/sql-html-sample.csv"
