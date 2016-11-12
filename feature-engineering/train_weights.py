@@ -81,13 +81,13 @@ dat_combine = pd.merge(so_dat_main, label_dat)
 # train for recall..
 
 # get the dups...
+train = pd.read_csv("../SESE/cleaned/2016_link_dups_time_fix.csv")
 
+"""
 test = sim_stackoverflow(so_dat_main.iloc[21].to_dict(), so_dat_main.iloc[:20], None, dictionary, 
                       lsi_mod, lda_mod, w2v_mod)
 
 ## looking only at the dups/link data...
-
-train = pd.read_csv("../SESE/cleaned/2016_link_dups_time_fix.csv")
 
 # maybe just take the first 17 rows, because this will create a dataset with 10% dup labels, and 90% nondups
 
@@ -95,21 +95,21 @@ train = pd.read_csv("../SESE/cleaned/2016_link_dups_time_fix.csv")
 pd.DataFrame(test['doc'], )
 
 #pd.DataFrame(test['body'], columns=
-
-             
+"""
+"""
 a =  train.iloc[21].to_dict()['bodyString']
 a1 = train.iloc[22].to_dict()['bodyString']
 b = train.iloc[:20]['bodyString'].tolist()
 
 b1 = sim_two_w2v(a, a1, w2v_mod)
+"""
 
-from word2vec_sim import *
-
+"""
 bb1 = sim_all_lsi(a, b, lsi_mod, dictionary).flatten().tolist()
 bb2 = sim_all_lda(a, b, lda_mod, dictionary).flatten().tolist()
 bb3 = sim_all_w2v(a, b, w2v_mod).flatten().tolist()
 bb4 = sim_all(a, b, dictionary).flatten().tolist()
-
+"""
 def sim_query_all(single, docs, dictionary,
               lsi_mod, lda_mod, w2v_mod, prefix=""):
     """takes in two documents and computes similarity between
@@ -137,6 +137,7 @@ def sim_stackoverflow(single_dict, docs_df, columns, dictionary,
         columns = {'title': 'title', 
                    'body': 'bodyString', 
                    'tag': 'tagsString'}
+    #print columns
     body_sim = sim_query_all(single_dict[columns['body']], docs_df[columns['body']].tolist(), 
                              dictionary, lsi_mod, lda_mod, w2v_mod, "_body")
     title_sim = sim_query_all(single_dict[columns['title']], docs_df[columns['title']].tolist(), 
@@ -147,21 +148,49 @@ def sim_stackoverflow(single_dict, docs_df, columns, dictionary,
     full_df = pd.concat([body_sim, title_sim, tag_sim], axis=1)
     return full_df
     
-
+"""
 test = sim_query_all(a, b, dictionary,
               lsi_mod, lda_mod, w2v_mod, "_body")
 
 a =  train.iloc[21].to_dict()['bodyString']
 a1 = train.iloc[22].to_dict()['bodyString']
 b = train.iloc[:20]['bodyString'].tolist()
-
+"""
 test = sim_stackoverflow(train.iloc[21].to_dict(), train.iloc[:20], None, dictionary, 
                          lsi_mod, lda_mod, w2v_mod)
 
+# build train set...
+train_subset = train.iloc[:17]
+train_labels = train_subset[['id', 'did']]
+train_labels.loc[:, 'label'] = 1
 
+m_ids = sorted(train_subset['id'].tolist(), key=lambda x: int(x))
+d_ids = sorted(train_subset['did'].tolist(), key=lambda x: int(x))
 
+ddict = {'title': 'dtitle', 
+        'body': 'dbodyString', 
+        'tag': 'dtagsString'}
+    
+train_feats = []
 
+for m_id in m_ids:
+    train_temp = train_subset[train_subset['id'].astype(int) <= int(m_id)]
+    # restack dataframe...
+    dtrain_temp = train_temp[['dbodyString', 'dtagsString', 'dtitle', 'did']]
+    dtrain_temp.columns = [x[1:] for x in dtrain_temp.columns]
+    train_temp = train_temp[['id', 'title', 'bodyString', 'tagsString']]
+    train_temp = pd.concat([train_temp, dtrain_temp])
+    train_temp = train_temp[train_temp['id'] != m_id]
+    single_doc = train_subset[train_subset['id'] == m_ids[0]].to_dict(orient="records")[0]
+    temp_feats = sim_stackoverflow(single_doc, train_temp, None, dictionary,
+              lsi_mod, lda_mod, w2v_mod)
+    # input column and dup col - to infer id. 
+    temp_feats.loc[:, 'id'] = m_id
+    temp_feats.loc[:, 'did'] = train_temp['id'].tolist() 
+    train_feats.append(temp_feats)
+    
+feature_df = pd.merge(pd.concat(train_feats), train_labels, on=['id', 'did'], how='left').drop_duplicates()
+feature_df['label'] = feature_df['label'].fillna(0)
+feature_df.describe()
 
-
-
-
+# now create a linear model which optimizes recall. 
