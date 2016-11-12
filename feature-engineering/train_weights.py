@@ -194,3 +194,35 @@ feature_df['label'] = feature_df['label'].fillna(0)
 feature_df.describe()
 
 # now create a linear model which optimizes recall. 
+from sklearn.metrics import recall_score, make_scorer, confusion_matrix, precision_score
+from scipy.stats import randint as sp_randint
+from sklearn.grid_search import GridSearchCV
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+
+clf = RandomForestClassifier(n_estimators=20)
+
+recall_scorer = make_scorer(recall_score)
+# use a full grid over all parameters
+param_grid = {
+    'n_estimators': [200, 700],
+    'max_features': ['auto', 'sqrt', 'log2']
+}
+
+# run grid search
+grid_search = GridSearchCV(estimator=clf, param_grid=param_grid, scoring=recall_scorer)
+
+X = feature_df[[u'doc_body', u'lda_body', u'lsi_body', u'w2v_body', u'doc_title',
+       u'lda_title', u'lsi_title', u'w2v_title', u'doc_tag', u'lda_tag',
+       u'lsi_tag', u'w2v_tag']].as_matrix()
+       
+Y = feature_df[['label']].as_matrix().flatten()
+
+grid_search.fit(X, Y)
+grid_search.predict(X)
+
+confusion_matrix(Y, grid_search.predict(X))
+
+
+
+
