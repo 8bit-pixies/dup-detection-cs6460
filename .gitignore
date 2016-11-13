@@ -60,3 +60,7 @@ Temporary Items
 paper/future work/*
 
 *.gz.u.npz
+.Rproj.user
+
+*.pkl
+*-checkpoint.ipynb

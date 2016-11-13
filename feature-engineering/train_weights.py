@@ -34,7 +34,11 @@ Negative sampling? - how we're training is one variant of negative sampling.
 import gensim
 import pandas as pd
 import numpy as np
-import scipy
+from sklearn.metrics import recall_score, make_scorer, confusion_matrix, precision_score
+from sklearn.grid_search import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
+import matplotlib.pyplot as plt
 
 from create_dictionary import train_corpus, transform_doc2bow, tokenize
 from sklearn.metrics.pairwise import cosine_similarity
@@ -194,11 +198,6 @@ feature_df['label'] = feature_df['label'].fillna(0)
 feature_df.describe()
 
 # now create a linear model which optimizes recall. 
-from sklearn.metrics import recall_score, make_scorer, confusion_matrix, precision_score
-from scipy.stats import randint as sp_randint
-from sklearn.grid_search import GridSearchCV
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
 
 clf = RandomForestClassifier(n_estimators=20)
 
@@ -223,6 +222,96 @@ grid_search.predict(X)
 
 confusion_matrix(Y, grid_search.predict(X))
 
+# build tree to see important feats?
+feat_importance = grid_search.estimator.fit(X,Y).feature_importances_
 
+feat_df = pd.DataFrame({
+    'importances': feat_importance,
+    'names': [u'doc_body', u'lda_body', u'lsi_body', u'w2v_body', u'doc_title',
+       u'lda_title', u'lsi_title', u'w2v_title', u'doc_tag', u'lda_tag',
+       u'lsi_tag', u'w2v_tag']
+                        })
+feat_df = feat_df.sort(['importances'], ascending=False)
+feat_df.plot.bar(x="names", y="importances")
+
+
+
+
+#### increase to say 250
+
+# build train set...
+train_subset = train.iloc[:250]
+train_labels = train_subset[['id', 'did']]
+train_labels.loc[:, 'label'] = 1
+
+m_ids = sorted(train_subset['id'].tolist(), key=lambda x: int(x))
+d_ids = sorted(train_subset['did'].tolist(), key=lambda x: int(x))
+
+ddict = {'title': 'dtitle', 
+        'body': 'dbodyString', 
+        'tag': 'dtagsString'}
+    
+train_feats = []
+
+for m_id in m_ids:
+    train_temp = train_subset[train_subset['id'].astype(int) <= int(m_id)]
+    # restack dataframe...
+    dtrain_temp = train_temp[['dbodyString', 'dtagsString', 'dtitle', 'did']]
+    dtrain_temp.columns = [x[1:] for x in dtrain_temp.columns]
+    train_temp = train_temp[['id', 'title', 'bodyString', 'tagsString']]
+    train_temp = pd.concat([train_temp, dtrain_temp])
+    train_temp = train_temp[train_temp['id'] != m_id]
+    single_doc = train_subset[train_subset['id'] == m_ids[0]].to_dict(orient="records")[0]
+    temp_feats = sim_stackoverflow(single_doc, train_temp, None, dictionary,
+              lsi_mod, lda_mod, w2v_mod)
+    # input column and dup col - to infer id. 
+    temp_feats.loc[:, 'id'] = m_id
+    temp_feats.loc[:, 'did'] = train_temp['id'].tolist() 
+    train_feats.append(temp_feats)
+    
+feature_df = pd.merge(pd.concat(train_feats), train_labels, on=['id', 'did'], how='left').drop_duplicates()
+feature_df['label'] = feature_df['label'].fillna(0)
+feature_df.describe()
+
+clf = RandomForestClassifier(n_estimators=20)
+
+recall_scorer = make_scorer(recall_score)
+# use a full grid over all parameters
+param_grid = {
+    'n_estimators': [200, 700],
+    'max_features': ['auto', 'sqrt', 'log2']
+}
+
+# run grid search
+grid_search = GridSearchCV(estimator=clf, param_grid=param_grid, scoring=recall_scorer)
+
+X = feature_df[[u'doc_body', u'lda_body', u'lsi_body', u'w2v_body', u'doc_title',
+       u'lda_title', u'lsi_title', u'w2v_title', u'doc_tag', u'lda_tag',
+       u'lsi_tag', u'w2v_tag']].as_matrix()
+       
+Y = feature_df[['label']].as_matrix().flatten()
+
+grid_search.fit(X, Y)
+#grid_search.predict(X)
+
+print(confusion_matrix(Y, grid_search.predict(X)))
+print(recall_score(Y, grid_search.predict(X)))
+
+"""
+array([[61229,     0],
+       [    7,  1263]])
+"""
+
+# build tree to see important feats?
+feat_importance = grid_search.estimator.fit(X,Y).feature_importances_
+
+feat_df = pd.DataFrame({
+    'importances': feat_importance,
+    'names': [u'doc_body', u'lda_body', u'lsi_body', u'w2v_body', u'doc_title',
+       u'lda_title', u'lsi_title', u'w2v_title', u'doc_tag', u'lda_tag',
+       u'lsi_tag', u'w2v_tag']
+                        })
+feat_df = feat_df.sort(['importances'], ascending=False)
+feat_df.plot.bar(x="names", y="importances")
 
 
