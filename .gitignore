@@ -64,3 +64,5 @@ paper/future work/*
 
 *.pkl
 *-checkpoint.ipynb
+
+.Rhistory
