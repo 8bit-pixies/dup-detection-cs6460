@@ -28,7 +28,7 @@ def transform_doc2bow(text, dictionary):
 if __name__ == "__main__":
     
     dictionary = gensim.corpora.Dictionary()
-    
+    """
     for fname in [
     "../SESE/cleaned/sql-html-js-2",
     "../SESE/cleaned/sql-html-js-1",
@@ -45,3 +45,16 @@ if __name__ == "__main__":
             dictionary.add_documents(texts)
     
     dictionary.save("../data/SESE.gz")
+    """
+    for fname in [
+    "../Reddit/reddit"
+    ]:
+    
+        for i, so_dat in enumerate(pd.read_csv(fname+".csv", chunksize=9000)):
+            print(i)
+            so_dat_main = so_dat[['id', 'title', 'body', 'tag']]
+    
+            texts = [tokenize(str(document)) for document in so_dat_main['body'].tolist()]
+            dictionary.add_documents(texts)
+    
+    dictionary.save("../data/reddit.gz")
