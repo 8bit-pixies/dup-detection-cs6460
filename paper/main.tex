@@ -47,7 +47,7 @@ In  this  project,  we  aim  to  develop  suitable  approach  for  understanding
 \end{abstract}
 
 \begin{IEEEkeywords}
-duplicate question, Piazza
+duplicate question, Piazza, online learning, machine learning
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -91,7 +91,7 @@ The remainder of the paper is organised as follows. We elaborate on the motivati
 
 \subsection{Online Latent Dirichlet Allocation}
 
-Online Latent Dirichlet Allocation is an online variant of Latent Dirichlet Allocation (LDA). LDA is a well-known topic modelling technique proposed by Blei \emph{et al.}\cite{lda}. LDA is a generative probabilistic model of a textual corpus (i.e., a set of textual documents), which takes a training textual corpus as input, and a number of parameters including the number of topics $(K)$ considered. In the training phase, for each document $s$, LDA will compute its topic distribution $\theta_s$, which is a vector with $K$ elements, and each element corresponds to a topic. The value of each element in $\theta_s$ is a real number from $0$ to $1$, which represents the proportion of the words in $s$ that belong to the corresponding topic in $s$. After training, LDA can be used to predict the topic distribution $\theta_m$ of a new document $m$. In our case, a document is the description of a question, and the topic is a higher level concept corresponding to a distribution of words. For example, we may have the topic "admissions", which is a distribution of words such as ``citizenship'', ``GRE'', ``TOEFL'', ``transcripts''. 
+Online Latent Dirichlet Allocation is an online variant of Latent Dirichlet Allocation (LDA). LDA is a well-known topic modelling technique proposed by Blei \emph{et al.}\cite{lda}. LDA is a generative probabilistic model of a textual corpus (i.e., a set of textual documents), which takes a training textual corpus as input, and a number of parameters including the number of topics $(K)$ considered. In the training phase, for each document $s$, LDA will compute its topic distribution $\theta_s$, which is a vector with $K$ elements, and each element corresponds to a topic. The value of each element in $\theta_s$ is a real number from $0$ to $1$, which represents the proportion of the words in $s$ that belong to the corresponding topic in $s$. After training, LDA can be used to predict the topic distribution $\theta_m$ of a new document $m$. In our case, a document is the description of a question, and the topic is a higher level concept corresponding to a distribution of words. For example, we may have the topic ``admissions'', which is a distribution of words such as ``citizenship'', ``GRE'', ``TOEFL'', ``transcripts''. 
 
 LDA can be extended in an online learning problem by reframing LDA using approximate inference techniques (variational inference) which then becomes an optimization problem and allows LDA to be trained via known approaches such as stochastic gradient descent\cite{onlinelda}. % explain this more...
 
@@ -127,8 +127,15 @@ The skip-gram model with softmax is expensive because the cost of computing $\lo
 
 Online variant of Word2Vec solves the online learning problem, by updating vocabulary whenever new documents are ingested. The new words are then initialized with random weights, whilst existing words retain their weights as normal. Then training will be again be initialised in an iterative fashion. % cite this?
 
+\subsection{Online Latent Semantic Indexing}
 
-\subsection{Cosine Similarity}
+Latent Semantic indexing is a transformation on bag-of-words models by applying truncated SVD to term-document matrices. This can be performed on word counts or tf-idf (term frequency-inverse document frequency). 
+
+The online variant of latent semantic indexing is created through progressively updating the dictionary of words with a decay factor which will eventually ``forget'' older words. SVD truncation can be performed in an online fashion using known stochastic SVD algorithms. 
+
+% expand this section.
+
+\subsection{Matrix Cosine Similarity}
 
 %(Write Why we don't need online learning here)
 
@@ -150,29 +157,62 @@ $$ | Vec_m  | = \sqrt{wt_{m,1}^2 + wt_{m,2}^2 + ... + wt_{m,v}^2} $$
 
 Cosine similarity measures do not require the whole corpus in order to compute similarity; rather it depends only on the pairwise sets of words. As such there is no online variant to cosine similarity as one does not need to build or store a corpus in its formulation.
 
+
 \section{Proposed Approach}
+
+In this section we will present the overall framework of duplicate question detection model. We will consider the components: title, tags, description, each having the three techniques applied. 
 
 \subsection{Overall Framework}
 
-Insert some image of the framework and description of how it would work overtime. 
+% Insert some image of the framework and description of how it would work overtime. 
 
-\subsection{Feature Construction}
+The framework of this prediction model using online learning consists of two phases: model building phase and prediction phase. In the model building phase, the goal is to train the models for building text features, which is then placed in a matrix similarity framework which become predictors for the supervised learning model. In the prediction phase the text models and the supervised models are used in conjunction to create a final prediction on similar questions.
 
-Probably revolves around the more qualitative side, as described here: 
-\url{http://researcher.ibm.com/researcher/files/us-apal/umap11_earlyexperts.pdf}
+The modelling process consists of three parts: 
 
+\begin{itemize}
+    \item Text Feature Building
+    \item Matrix Cosine Similarity
+    \item Model Training
+\end{itemize}
 
-\subsection{Estimation of Weights}
+On the prediction phase it involves three parts: 
 
-Logistic regression would probably be good enough...
+\begin{itemize}
+    \item Text Feature Prediction
+    \item Matrix Cosine Similarity
+    \item Model Prediction
+\end{itemize}
+
+%The framework relies on the existence of some questions which are known duplicates. This sample can be as small as 30 question pairs. 
+
+\subsection{Text Feature Building}
+
+To build text features, questions are to be collected in an iterative manner. Known pairs of similar questions are then to be labelled and preprocessed. In the preprocessing step, the title, description and tags (if applicable) are extracted. Next they are tokenized, common English stop words are removed and stemming is performed. Stop words are commonly occurring words, e.g., ``a'', ``the'', ``and''. Since they appear often, they possess low discriminatory power. Stemming is the process to reduce a word to its root. For exampling, using stemming on the words ``marks'', ``marking'', ``marked'' will result in the root word ``mark''. The Porter stemming algorithm from Python's gensim module was used. 
+
+After these preprocessing step is performed, then each document have its text features using the three algorithms described in the previous section: Online Latent Dirichlet Allocation, Online Word2Vec, Online Latent Semantic Indexing. 
+
+\subsection{Matrix Cosine Similarity}
+
+Matrix Cosine Similiarity algorithm was described in the previous section. This technique is used on each of the word vector representations which were created in the text feature building phase in order to generate a similarity score. These scores will then be the features which are then passed into the supervised learning model. 
+
+\subsection{Supervised Learning Models}
+
+Now that modelling matrix created from the Matrix Cosine similarity step is created, we can simply pass it into any machine learning algorithm. In this paper, we used Random Forest to evaluate the effectiveness of our duplicate question detection model. 
 
 \section{Experiments and Results}
 
 \subsection{Experimental Setup}
 
-Our online learning model is evaluated on historical questions in Stack Overflow. We parse data for `html' and `javascript' tags from January 2008 to October 2016 using Stackexchange API. We extract approximately 750 000 questions over 10 month period. 
+Our online learning model is evaluated based on two different data sets. Firstly it is evaluated on historical questions in Stack Overflow. We parse data for `html' and `javascript' tags from January 2008 to October 2016 using Stackexchange API. We extract approximately 750 000 questions over 10 month period. The next dataset used is posts from OMSCS subreddit from October 2016 to November 2016 using Python's praw API. The similar questions were created by using FAQ datasets compiled by Reddit and Google+ OMSCS communities, and the similar questions were manually labelled. The experimental environment is from Windows 10 desktop machine, Intel i3 processor with 8GB of RAM. 
 
-A Python library called Gensim was used to extract fields from the questions. Gensim is a flexible Python library statistical semantics.
+A Python library called Gensim was used to extract fields from the questions. Gensim is a flexible Python library statistical semantics. Gensim offered all the online text feature building capabilities within this setup. This includes stopword lists, Porter stemming, Online LDA, Online Latent Semantic Indexing, Online Word2Vec algorithms.
+
+The Python library scikit-learn was used to perform supervised learning portion of the model. The two candidate models used were RandomForest and Logistic Regression. 
+
+In Stack Overflow, users will manually detect duplicate questions. In our setup we successfully identified over 1,000 questions which were either marked as duplicates or manually linked to another question. These questions formed the basis for our duplicate labels. 
+
+For the OMSCS subreddit, we manually linked 30 posts with the relevant FAQ question, which is our corpus of known questions. 
 
 \subsection{Evaluation Metrics}
 
@@ -196,9 +236,13 @@ Threats to construct validity - suitability of evaluation metrics
 
 \section{Related Work}
 
+Zhang \emph{et al}\cite{dupred} 
+
 Besides what has been in the proposal, links to online learning, such as vowpal wabbit:
 
-Zhang \emph{et al}\cite{dupred} 
+Chopra \emph{et al}\cite{simmatrix}
+
+Pal \emph{et al}\cite{pal} described how we can identify experts in MOOC communities, this notion of detecting experts early can be used to build a corpus of questions based on highly voted expert answers which can then be used to extend a simple Reddit bot in order to provide value to the community. 
 
 \section{Conclusion}
 
@@ -223,10 +267,6 @@ Some conclusion
 % starts a section numbered zero.)
 %
 
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Some text for the appendix.
 
 % use section* for acknowledgement
 
@@ -258,7 +298,12 @@ Zhang, Y., Lo, D., Xia, X., and Sun, J.-L. (2015). ``Multi-factor duplicate ques
 Blei, D. M., Ng, A. Y. and Jordan, M. I. (2003). ``Latent dirichlet allocation''. J. Mach. Learn. Res., 3, 993--1022. doi: 10.1162/jmlr.2003.3.4-5.993. Retreived on 12 October from \url{www.jmlr.org/papers/volume3/blei03a/blei03a.pdf}
 
 \bibitem{onlinelda}
-Hoffman, M. D., Blei, D. M. and Bach F. (2010). ``Online Learning for Latent Dirichlet Allocation'' Retreived on 12 October from \url{http://www.cs.princeton.edu/~blei/papers/HoffmanBleiBach2010b.pdf}
+Hoffman M. D., Blei D. M. and Bach F. (2010). ``Online Learning for Latent Dirichlet Allocation'' Retreived on 12 October from \url{http://www.cs.princeton.edu/~blei/papers/HoffmanBleiBach2010b.pdf}
+
+\bibitem{simmatrix}
+
+Chopra S., Hadsell, R. and LeCun, Y. (2005). ``Learning a Similarity Metric Discriminatively, with Application to Face
+Verification'' Retreived on 17 November from \url{http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf}
 
 
 \end{thebibliography}
