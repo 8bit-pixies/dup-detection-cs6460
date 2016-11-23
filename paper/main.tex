@@ -1,7 +1,7 @@
 
 
-%\documentclass[journal]{IEEEtran}
-\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
 
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -210,29 +210,84 @@ A Python library called Gensim was used to extract fields from the questions. Ge
 
 The Python library scikit-learn was used to perform supervised learning portion of the model. The two candidate models used were RandomForest and Logistic Regression. 
 
-In Stack Overflow, users will manually detect duplicate questions. In our setup we successfully identified over 1,000 questions which were either marked as duplicates or manually linked to another question. These questions formed the basis for our duplicate labels. 
+In Stack Overflow, users will manually detect duplicate questions. In our setup we successfully identified 7612 questions which were either marked as duplicates or manually linked to another question with tags ``html'' or ``javascript''. These questions formed the basis for our `similar questions' labels. 
 
 For the OMSCS subreddit, we manually linked 30 posts with the relevant FAQ question, which is our corpus of known questions. 
 
+Both of the two datasets were converted into a training and testing dataset as described in the table below. Since the training dataset is created through using similarity matrices, this means that a small number of linked/duplicated questions can yield a much larger training/testing set. 
+
+\begin{center}
+ \begin{tabular}{|l c c |} 
+ \hline
+ Dataset & \#Similar Label & \#All \\ [0.5ex] 
+ \hline\hline
+ Training Stackoverflow & 1238 & 62499 \\ 
+ \hline
+ Testing Stackoverflow & 258 & 10398  \\
+ \hline
+ Training Reddit & 114 &   676 \\
+ \hline
+ Testing Reddit & 23 & 139  \\
+ \hline
+\end{tabular}
+\end{center}
+
 \subsection{Evaluation Metrics}
 
-To evaluate the performace, we will use recall-rate which is also used in \cite{dupred}
+To evaluate the performance, we will use recall-rate which is also used in \cite{dupred}. 
 
 $$
 \text{recall-rate} = \frac{N_\text{detected}}{N_\text{total}}
 $$
 
+This is a common metric which is used by \cite{dupred}.
+
 \subsection{Research Questions and Findings}
 
-How effective? How does it compare to a batch learning approach.
+Over a small subset and specific forums both of these appraoches appeared to perform reasonably well. 
+
+However at the same time, even when a solution is reported as a match it can have some rather amusing answers. For example:
+
+
+
+
+We are interested in answering the following research questions.
+
+\emph{How effective is our approach?}
+
+Our approach has seen fairly high recall rate, however if we were to productionize it and create a bot, it would have to follow the appraoch of Zhang \emph{et al}\cite{dupred}, where the top \emph{k} records are returned. This will ensure suitable answers are provided. 
+
+For example, one unsuitable answer which appears in the community FAQs occur is telling users that ``We can not answer that for you here. We can, however, give you advice for the future.'' which has been linked to questions on topics like dealing with failing courses. Although the answer is suitable for the topic at hand, it is neither helpful and may be detrimental to the community. 
+
+
+From a practical standpoint, this may not be that useful for the end user, as Reddit is more community orientated rather than a Q\&A discussion forum, which further increases the need for better answers compared with a Stack overflow setup. 
+
+
+\emph{What variables are important in our modelling routine, does it vary with different data sources?}
+
+The image below shows the variable importance for the various text features for our Stack overflow model.
+
+\includegraphics[width=\textwidth]{so_varimp.png}
+
+The image below shows the variable importance for the various text features for our Reddit model.
+
+\includegraphics[width=\textwidth]{reddit_varimp.png}
+
+From the two images of the variable importance metrics, it is clear that using different models will yield different parameter weightings. More importantly it reveals that LDA features appear to be the most significant. This also suggests that features which may incorporate information around the subject of the post may also improve performance. Recently including features like POS tags and named-entities have been used to great effect in information retrieval problems\cite{featurerich}.
+
+\emph{What is the effect of changing the types of models used}
+
+When examining the different models, linear models and tree models were compared and contrasted. We achieved better results from using tree based models like random forest due to the interaction between the different features. Since different models have different parameters weights, having a tree-based model makes it easier to achieve reasonable results rather than needing to tune and fine the relevant interactions in the linear model framework. 
 
 \section{Discussion}
 
 \subsection{Threats to Validity}
 
-Threats include the ability of this approach to generalise to all young communities. As young communities is quite broad, the focus in this paper has been quite targeted, looking at computer science forums, and learning centers. The duplicate questions were also quite targeted and manually pruned. In an more unbalanced set, this ....?
+Threats include the ability of this approach to generalise to all young communities. As young communities is quite broad, the focus in this paper has been quite targeted, looking at computer science forums, and learning centers. The duplicate questions were also quite targeted and manually pruned. 
 
-Threats to construct validity - suitability of evaluation metrics
+The model also struggled on longer posts as the features did not appear to pick up the subject of the post correctly. 
+
+Threats to construct validity - suitability of evaluation metrics. In recent years ROUGE metric has been created for information retrieval problems, especially when reconstructing answers to be aligned with a human answer. These are based on the recall metric with noticeable improvements. In future interations which focus more on how the answer is presented, would definitely focus on using this instead
 
 \section{Related Work}
 
@@ -243,6 +298,12 @@ Besides what has been in the proposal, links to online learning, such as vowpal 
 Chopra \emph{et al}\cite{simmatrix}
 
 Pal \emph{et al}\cite{pal} described how we can identify experts in MOOC communities, this notion of detecting experts early can be used to build a corpus of questions based on highly voted expert answers which can then be used to extend a simple Reddit bot in order to provide value to the community. 
+
+% https://arxiv.org/pdf/1602.06023v5.pdf
+Nallapati \emph{et al}\cite{featurerich} explains another way to extend word vectors to include linguistic features using technique they define as "Feature-rich Encoder". 
+
+% insert some link to some paper
+Text summarization - longer texts means similarity breaks down really aggressively which can lead to better evaluation metrics such as ROGUE. 
 
 \section{Conclusion}
 
@@ -301,10 +362,11 @@ Blei, D. M., Ng, A. Y. and Jordan, M. I. (2003). ``Latent dirichlet allocation''
 Hoffman M. D., Blei D. M. and Bach F. (2010). ``Online Learning for Latent Dirichlet Allocation'' Retreived on 12 October from \url{http://www.cs.princeton.edu/~blei/papers/HoffmanBleiBach2010b.pdf}
 
 \bibitem{simmatrix}
-
 Chopra S., Hadsell, R. and LeCun, Y. (2005). ``Learning a Similarity Metric Discriminatively, with Application to Face
 Verification'' Retreived on 17 November from \url{http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf}
 
+\bibitem{featurerich}
+Nallapati R., Zhou B., Noueira dos santos C., Gulcehre C. and Xiang B. (2016). ``Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond'' Retreived on 23 November from \url{https://arxiv.org/abs/1602.06023}
 
 \end{thebibliography}
 
