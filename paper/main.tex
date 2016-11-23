@@ -1,7 +1,7 @@
 
 
-\documentclass[journal]{IEEEtran}
-%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+%\documentclass[journal]{IEEEtran}
+\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
 
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -265,13 +265,17 @@ From a practical standpoint, this may not be that useful for the end user, as Re
 
 \emph{What variables are important in our modelling routine, does it vary with different data sources?}
 
-The image below shows the variable importance for the various text features for our Stack overflow model.
+\begin{figure}[ht]
+\caption{Variable importance for the various text features for our Stack overflow model}
+\centering
+\includegraphics[width=0.4\textwidth]{so_varimp.png}
+\end{figure}
 
-\includegraphics[width=\textwidth]{so_varimp.png}
-
-The image below shows the variable importance for the various text features for our Reddit model.
-
-\includegraphics[width=\textwidth]{reddit_varimp.png}
+\begin{figure}[ht]
+\caption{Variable importance for the various text features for our Reddit model}
+\centering
+\includegraphics[width=0.4\textwidth]{reddit_varimp.png}
+\end{figure}
 
 From the two images of the variable importance metrics, it is clear that using different models will yield different parameter weightings. More importantly it reveals that LDA features appear to be the most significant. This also suggests that features which may incorporate information around the subject of the post may also improve performance. Recently including features like POS tags and named-entities have been used to great effect in information retrieval problems\cite{featurerich}.
 
