@@ -1,7 +1,7 @@
 
 
-%\documentclass[journal]{IEEEtran}
-\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+%\documentclass[journal,12pt,onecolumn,draftclsnofoot,]{IEEEtran}
 
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -324,14 +324,13 @@ When examining the different models, linear models and tree models were compared
 \begin{table}[h!]
 \centering
 \caption{Recall rate for both datasets using different supervised models.}
- \begin{tabular}{|l r r|} 
+ \begin{tabular}{l l r} 
  \hline
- Dataset & Model & Recall Rate  \\ [0.5ex] 
- \hline\hline
+ Dataset & Model & Recall Rate  \\ 
+ \hline
  Stackoverflow & Random Forest & 76.87\%  \\
  Stackoverflow & Logistic Regression & 37.12\%  \\
- \hline
-  Reddit & Random Forest & 80.59\%  \\
+   Reddit & Random Forest & 80.59\%  \\
   Reddit & Logistic Regression & 10.84\%  \\
  \hline
 \end{tabular}
