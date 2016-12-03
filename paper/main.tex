@@ -344,18 +344,29 @@ Threats include the ability of this approach to generalise to all young communit
 
 Threats to construct validity - suitability of evaluation metrics. In recent years ROUGE (Recall-Oriented Understudy for Gisting Evaluation)\cite{rouge} metric has been created for information retrieval problems, especially when reconstructing answers to be aligned with a human answer. These are based on the recall metric with noticeable improvements. In future iterations which focus more on how the answer is presented, would definitely focus on using this instead.
 
+\subsection{Undiscovered Duplicate Questions}
+
+As the problem has been framed as a supervised learning problem, it is quite straightforward to extend it to find other duplicate questions, particularly in the Stack Overflow framework. Similar to \cite{dupred}, there are many duplicate questions which have not been discovered and marked by users. 
+
+In comparison with the Reddit data, this problem is slightly different, as we have user generated content which serves to be the duplicate question target which we should aim to expand. One of the key difficulties in doing approaching this comes in two forms. Firstly the issues of consent\cite{issues}, and secondly expanding online learning to accommodate dynamically generated content\cite{pal}\cite{supermooc}. This is further explored in section `Related Work'. 
+
+Furthermore, it is important to understand the impact of automated responses, such as a bot. It is important to align user perception of quality with our own. For example, although we may perceive to have a correctly relevant response, the user may view it as a low quality result. As discussed by Manning \emph{et al.}\cite{introIR}  ``\emph{We then step back to introduce the notion of user utility, and how it is approximated by the use of document relevance \dots The key utility measure is user happiness. Speed of response and the size of the index are factors in user happiness. It seems reasonable to assume that relevance of results is the most important factor: blindingly fast, useless answers do not make a user happy. However, user perceptions do not always coincide with system designers' notions of quality. For example, user happiness commonly depends very strongly on user interface design issues, including the layout, clarity, and responsiveness of the user interface, which are independent of the quality of the results returned.}'' As an example the questions seeking advice have user curated responses are generally something generic like ``We can not answer that for you here. We can, however, give you advice for the future.''\cite{redditfaq}. 
 
 
-\section{Future Work}
 
-As outlined in how this model was put together not all components are subject to online learning. More specifically the supervised portion used only batch learning techniques. Future work would examine using online supervised learning to augment this model as shown in Vowpal Wabbit\cite{vowpalwabbit}.
+\section{Related Work}
+
+In this section, we briefly review related approaches and extensions to our approach. 
+
+As mentioned in the previous section, a natural extension to online learning, would be to incorporate online learning based on a posters behavioural characteristics. This is highlighted in two papers \cite{pal}\cite{supermooc}. Pal \emph{et al}\cite{pal} described how we can identify experts in MOOC communities. The approached used was to combine various heuristics based on a users posting behaviour, activity and language. These were then treated as features which were processed using decision tree models and support vector machines which would create a discriminative model which can then identify experts early on within an online community. Huang \emph{et all}\cite{supermooc} demonstrated how heuristics could be created across different classes based on data from other unrelated sources. This paper suggests that ``superposters'' which could be regarded as experts have behaviors which is persistent across multiple courses and suggests that identifying superposters ``may yield payoffs across multiple courses''. Through using these features, and training an appropriate model, one could build an online algorithm which will update the corpus of question/answer pairs which can then be used to detect duplicate questions in the future. 
+
+As outlined above, not all components are subject to online learning. More specifically the supervised portion used only batch learning techniques. Future work would examine using online supervised learning to augment this model as shown in Vowpal Wabbit\cite{vowpalwabbit} or in On-line randomforests\cite{onlinerf}.
 
 Within the Gensim library, the similarity matrix used was the cosine similarity. Chopra \emph{et al}\cite{simmatrix} has demonstrated that this measure of distance can be improved by learning different measures of similarity through utilizing weights within a Neural Network. 
 
-Pal \emph{et al}\cite{pal} described how we can identify experts in MOOC communities, this notion of detecting experts early can be used to build a corpus of questions based on highly voted expert answers which can then be used to extend a simple Reddit bot in order to provide value to the community. 
 
 % https://arxiv.org/pdf/1602.06023v5.pdf
-Nallapati \emph{et al}\cite{featurerich} explains another way to extend word vectors to include linguistic features using technique they define as "Feature-rich Encoder". 
+Nallapati \emph{et al}\cite{featurerich} explains another way to extend word vectors to include linguistic features using technique they define as "Feature-rich Encoder". This is a similar approach taken by Bogatyy\cite{bog}, both which demonstrates adding linguistic features such as `nominal subject' to a model does provide uplift in various machine learning and information retrieval settings. In comparison the approach taken by \cite{featurerich} involved adding information on parts-of-speech tagging and named-entity-recognition tagging. 
 
 % insert some link to some paper
 %Text summarization - longer texts means similarity breaks down really aggressively which can lead to better evaluation metrics such as ROGUE. 
@@ -393,10 +404,14 @@ In the future we plan to extend this approach with bleeding edge techniques such
 %  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
   
 \bibitem{kincaid}
-Kincaid, J. (2010, February 5). ``Piazzza gives classmates an online forum to trade their knowledge'''. Retrieved September 18, 2016, from \url{https://techcrunch.com/2010/02/05/piazzza-college-questions-answers/}
+Kincaid, J. (2010, February 5). ``Piazza gives classmates an online forum to trade their knowledge'''. Retrieved September 18, 2016, from \url{https://techcrunch.com/2010/02/05/piazzza-college-questions-answers/}
 
 \bibitem{pal}
 Pal, A., Farzan, R., Konstan, J. A., and Kraut, R. E. ``Early detection of potential experts in question answering communities.'' in \emph{User Modeling, Adaption and Personalization}. Springer, 2011, 231-242. Retrieved on 12 September 2016 from \url{http://researcher.ibm.com/researcher/files/us-apal/umap11_earlyexperts.pdf}
+
+
+\bibitem{supermooc}
+Huang, J., Dasgupta A., Ghosh A., Manning, J., and Sanders M. (2014) `Superposter behavior in MOOC forums.'' in \emph{Proceedings of the First ACM Conference on Learning @ Scale Conference}. 2014, 117-126. Retrieved on 12 September 2016 from \url{http://jonathan-huang.org/research/pubs/las14/hdgms_las14.pdf}
 
 \bibitem{modpred}
 Shmueli, G. (2010). ``To explain or to predict?'' \emph{Statistical Science} 25(3), 289–310. doi:10.1214/10-sts330. Retrieved on 30 September from \url{http://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf}
@@ -427,9 +442,20 @@ Nallapati R., Zhou B., Noueira dos santos C., Gulcehre C. and Xiang B. (2016). `
 Elith J. and Leathwick J. (2016). ``Boosted Regression Trees for ecological modelling'' Retreived on 24 November from \url{https://cran.r-project.org/web/packages/dismo/vignettes/brt.pdf}
 
 
+\bibitem{issues}
+Yassir A., and Nayak S. (2012) ``A Reliable Effective Terascale Linear Learning System''. In International Journal of Computer Science and Communication Networks, 2(1), 93-98. Retreived on 24 November from \url{http://www.ijcscn.com/Documents/Volumes/vol2issue1/ijcscn2012020116.pdf}
+
+
+\bibitem{redditfaq}
+Reddit OMSCS FAQ. (n.d.). Retrieved December 03, 2016, from https://www.reddit.com/r/OMSCS/wiki/index
+
 
 \bibitem{vowpalwabbit}
 Agarwal A., Chapelle O., Dudik M. and Langford J. (2012). ``A Reliable Effective Terascale Linear Learning System''. In Journal of Machine Learning Research 2012. Retreived on 24 November from \url{https://arxiv.org/pdf/1110.4198v3.pdf}
+
+%\cite{onlinerf}
+\bibitem{onlinerf}
+Saffari, A., Leistner, C., Santner, J., Godec, M., and Bischof, H. (2009). ``On-line Random Forests''. 2009 IEEE 12th International Conference on Computer Vision Workshops, ICCV Workshops. doi:10.1109/iccvw.2009.5457447. Retreived on 3 December from \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.150.1671&rep=rep1&type=pdf}
 
 
 \bibitem{rouge}
