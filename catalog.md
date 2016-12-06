@@ -19,3 +19,6 @@ A Python installation is required with the following packages and their dependen
 
 *  gensim
 *  pandas
+*  praw
+
+This can be installed via `pip install`
