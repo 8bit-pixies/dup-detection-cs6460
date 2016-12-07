@@ -26,4 +26,7 @@ A Python installation is required with the following packages and their dependen
 
 This can be installed via `pip install`
 
-`catalog.pdf` was created using `pandoc`. Once installed it can be created through: `pandoc catalog.md -o catalog.pdf`
+Other tools
+-----------
+
+Pdf's were created via `pandoc` and `sharelatex.com`
