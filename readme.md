@@ -10,8 +10,6 @@ In this project, we aim to develop suitable approach for understanding quality o
 Readme
 ======
 
-Repo for CS6460 - mini-thesis Gatech.
-
 Running Milestone 1
 -------------------
 
