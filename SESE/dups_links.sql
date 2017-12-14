@@ -1,4 +1,4 @@
-.txtselect distinct p.id, p.title, p.body, p.tags, p.creationdate,
+select distinct p.id, p.title, p.body, p.tags, p.creationdate,
 dupes.id as did, dupes.title as dtitle, dupes.body as dbody, dupes.tags, dupes.creationdate as dcreationdate, links.linktypeid as linktype
 from posts p
 inner join posttags pt on pt.postid = p.id
